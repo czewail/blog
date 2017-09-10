@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="zewail blog chanzewail 陈泽韦 博客" />
+  <meta name="keywords" content="php," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zewail&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="第一步：找到lnmpa安装源位置12# 找到自己安装的php版本cd /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/ 第二步：查看phpize1/usr/local/php/bin/phpize 返回类似下面的信息：1234Configuring for:PHP Api Version:         20131106Zend Module Api No:">
+<meta name="keywords" content="php">
+<meta property="og:type" content="article">
+<meta property="og:title" content="LNMP安装PHP fileinfo扩展模块">
+<meta property="og:url" content="http://yoursite.com/2017/09/10/LNMP安装PHP-fileinfo扩展模块/index.html">
 <meta property="og:site_name" content="Zewail&#39;s Blog">
+<meta property="og:description" content="第一步：找到lnmpa安装源位置12# 找到自己安装的php版本cd /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/ 第二步：查看phpize1/usr/local/php/bin/phpize 返回类似下面的信息：1234Configuring for:PHP Api Version:         20131106Zend Module Api No:">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-10T14:37:15.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zewail&#39;s Blog">
+<meta name="twitter:title" content="LNMP安装PHP fileinfo扩展模块">
+<meta name="twitter:description" content="第一步：找到lnmpa安装源位置12# 找到自己安装的php版本cd /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/ 第二步：查看phpize1/usr/local/php/bin/phpize 返回类似下面的信息：1234Configuring for:PHP Api Version:         20131106Zend Module Api No:">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/10/LNMP安装PHP-fileinfo扩展模块/"/>
 
 
 
 
 
-  <title>Zewail's Blog</title>
+  <title>LNMP安装PHP fileinfo扩展模块 | Zewail's Blog</title>
   
 
 
@@ -160,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -255,9 +258,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -287,9 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/10/LNMP安装PHP-fileinfo扩展模块/" itemprop="url">LNMP安装PHP fileinfo扩展模块</a></h1>
+          <h1 class="post-title" itemprop="name headline">LNMP安装PHP fileinfo扩展模块</h1>
         
 
         <div class="post-meta">
@@ -361,9 +362,7 @@
       
 
       
-        
-          
-            <h4 id="第一步：找到lnmpa安装源位置"><a href="#第一步：找到lnmpa安装源位置" class="headerlink" title="第一步：找到lnmpa安装源位置"></a>第一步：找到lnmpa安装源位置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 找到自己安装的php版本</span></div><div class="line"><span class="built_in">cd</span> /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/</div></pre></td></tr></table></figure>
+        <h4 id="第一步：找到lnmpa安装源位置"><a href="#第一步：找到lnmpa安装源位置" class="headerlink" title="第一步：找到lnmpa安装源位置"></a>第一步：找到lnmpa安装源位置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 找到自己安装的php版本</span></div><div class="line"><span class="built_in">cd</span> /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/</div></pre></td></tr></table></figure>
 <h4 id="第二步：查看phpize"><a href="#第二步：查看phpize" class="headerlink" title="第二步：查看phpize"></a>第二步：查看phpize</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/php/bin/phpize</div></pre></td></tr></table></figure>
 <p>返回类似下面的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Configuring <span class="keyword">for</span>:</div><div class="line">PHP Api Version:         20131106</div><div class="line">Zend Module Api No:      20131226</div><div class="line">Zend Extension Api No:   220131226</div></pre></td></tr></table></figure></p>
 <p>phpize是用来扩展php扩展模块的，通过phpize可以建立php的外挂模块，比如你想在原来编译好的php中加入memcached或者ImageMagick等扩展模块，可以使用phpize</p>
@@ -373,8 +372,6 @@
 <h4 id="第四步：修改php配置"><a href="#第四步：修改php配置" class="headerlink" title="第四步：修改php配置"></a>第四步：修改php配置</h4><p>/usr/local/php/etc/php.ini 添加扩展：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=fileinfo.so</div></pre></td></tr></table></figure></p>
 <p>如果安装的是nginx，则重启php-fpm进程：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/init.d/php-fpm restart</div></pre></td></tr></table></figure></p>
 
-          
-        
       
     </div>
     
@@ -389,174 +386,36 @@
 
     <footer class="post-footer">
       
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/10/Centos7关闭防火墙并使用iptables/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Chan Zewail">
-      <meta itemprop="description" content="">
-      <meta itemprop="image" content="/images/avatar.jpg">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Zewail's Blog">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/10/Centos7关闭防火墙并使用iptables/" itemprop="url">Centos7关闭防火墙并使用iptables</a></h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T22:24:13+08:00">
-                2017-09-10
-              </time>
-            
-
-            
-
-            
-          </span>
-
+        <div class="post-tags">
           
-            <span class="post-category" >
-            
-              <span class="post-meta-divider">|</span>
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-folder-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">分类于</span>
-              
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
-                  </a>
-                </span>
-
-                
-                
-                  ， 
-                
-              
-                <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/CentOS/" itemprop="url" rel="index">
-                    <span itemprop="name">CentOS</span>
-                  </a>
-                </span>
-
-                
-                
-              
-            </span>
+            <a href="/tags/php/" rel="tag"># php</a>
           
-
-          
-            
-          
-
-          
-          
-
-          
-
-          
-
-          
-
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
-      
-
-      
-        
-          
-            <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>关闭firewall<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
-<p>禁止firewall开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">disable</span> firewalld.service</div></pre></td></tr></table></figure></p>
-<h3 id="安装iptables"><a href="#安装iptables" class="headerlink" title="安装iptables"></a>安装iptables</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install iptables-services</div></pre></td></tr></table></figure>
-<h3 id="修改iptables配置"><a href="#修改iptables配置" class="headerlink" title="修改iptables配置"></a>修改iptables配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
-<p>看情况增加规则，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT</div></pre></td></tr></table></figure></p>
-<h3 id="重启iptables并配置iptables开机启动"><a href="#重启iptables并配置iptables开机启动" class="headerlink" title="重启iptables并配置iptables开机启动"></a>重启iptables并配置iptables开机启动</h3><p>重启iptables</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart iptables.service</div></pre></td></tr></table></figure>
-<p>设置iptables开机启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> iptables.service</div></pre></td></tr></table></figure>
-          
-        
-      
-    </div>
-    
-    
-    
-
-    
-
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
       
 
       
       
-        <div class="post-eof"></div>
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/09/10/Centos7关闭防火墙并使用iptables/" rel="next" title="Centos7关闭防火墙并使用iptables">
+                <i class="fa fa-chevron-left"></i> Centos7关闭防火墙并使用iptables
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
       
     </footer>
   </div>
@@ -566,10 +425,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -577,6 +437,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -597,8 +461,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -698,6 +571,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-4"><a class="nav-link" href="#第一步：找到lnmpa安装源位置"><span class="nav-number">1.</span> <span class="nav-text">第一步：找到lnmpa安装源位置</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第二步：查看phpize"><span class="nav-number">2.</span> <span class="nav-text">第二步：查看phpize</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第三步：编译模块"><span class="nav-number">3.</span> <span class="nav-text">第三步：编译模块</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#第四步：修改php配置"><span class="nav-number">4.</span> <span class="nav-text">第四步：修改php配置</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -811,10 +700,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
