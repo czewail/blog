@@ -270,7 +270,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/MAC命令行中用sublime打开指定文件和文件夹/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chan Zewail">
@@ -289,7 +289,7 @@
         
           <h1 class="post-title" itemprop="name headline">
                 
-                <a class="post-title-link" href="/2017/09/11/MAC命令行中用sublime打开指定文件和文件夹/" itemprop="url">MAC命令行中用sublime打开指定文件和文件夹</a></h1>
+                <a class="post-title-link" href="/2017/09/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/" itemprop="url">Mac命令行用sublime、vscode、atom命令打开文件或目录</a></h1>
         
 
         <div class="post-meta">
@@ -363,10 +363,12 @@
       
         
           
-            <h3 id="建立软件接"><a href="#建立软件接" class="headerlink" title="建立软件接"></a>建立软件接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/<span class="built_in">local</span>/bin/sublime</div></pre></td></tr></table></figure>
+            <h3 id="普通版：建立软连接"><a href="#普通版：建立软连接" class="headerlink" title="普通版：建立软连接"></a>普通版：建立软连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/<span class="built_in">local</span>/bin/sublime</div><div class="line">ln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/<span class="built_in">local</span>/bin/atom</div><div class="line">ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/<span class="built_in">local</span>/bin/vscode</div></pre></td></tr></table></figure>
+<h3 id="zsh版：alias"><a href="#zsh版：alias" class="headerlink" title="zsh版：alias"></a>zsh版：alias</h3><p>编辑<code>.zsh</code>配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.zshrc</div></pre></td></tr></table></figure></p>
+<p>添加<code>alias</code>别名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alias sublime=&apos;/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl&apos;</div><div class="line">alias atom=&apos;/Applications/Atom.app/Contents/MacOS/Atom&apos;</div><div class="line">alias vscode=&apos;/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code&apos;</div></pre></td></tr></table></figure></p>
 <h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>打开文件</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sublime example.js</div></pre></td></tr></table></figure>
-<p>打开当前目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">sublime .</div></pre></td></tr></table></figure></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sublime example.js</div><div class="line">atom example.js</div><div class="line">vscode example.js</div></pre></td></tr></table></figure>
+<p>打开当前目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sublime .</div><div class="line">atom .</div><div class="line">vscode .</div></pre></td></tr></table></figure></p>
 
           
         

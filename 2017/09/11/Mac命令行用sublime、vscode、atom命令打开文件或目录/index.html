@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="linux," />
+  <meta name="keywords" content="mac,sublime," />
 
 
 
@@ -94,18 +94,18 @@
 
 
 
-<meta name="description" content="当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。 下面给出解决方法： 列出状态为Attached的session id：1screen -ls 先踢掉前一用户，再登陆1screen -D  -r ＜session-id&amp;gt;">
-<meta name="keywords" content="linux">
+<meta name="description" content="普通版：建立软连接123ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublimeln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/local/bin/atomln -s /Applications/Visual\">
+<meta name="keywords" content="mac,sublime">
 <meta property="og:type" content="article">
-<meta property="og:title" content="解决screen断开后连不上的问题">
-<meta property="og:url" content="http://yoursite.com/2017/09/10/解决screen断开后连不上的问题/index.html">
+<meta property="og:title" content="Mac命令行用sublime、vscode、atom命令打开文件或目录">
+<meta property="og:url" content="http://yoursite.com/2017/09/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/index.html">
 <meta property="og:site_name" content="Zewail&#39;s Blog">
-<meta property="og:description" content="当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。 下面给出解决方法： 列出状态为Attached的session id：1screen -ls 先踢掉前一用户，再登陆1screen -D  -r ＜session-id&amp;gt;">
+<meta property="og:description" content="普通版：建立软连接123ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublimeln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/local/bin/atomln -s /Applications/Visual\">
 <meta property="og:locale" content="zh-Hans">
-<meta property="og:updated_time" content="2017-09-10T15:40:03.000Z">
+<meta property="og:updated_time" content="2017-09-10T17:22:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决screen断开后连不上的问题">
-<meta name="twitter:description" content="当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。 下面给出解决方法： 列出状态为Attached的session id：1screen -ls 先踢掉前一用户，再登陆1screen -D  -r ＜session-id&amp;gt;">
+<meta name="twitter:title" content="Mac命令行用sublime、vscode、atom命令打开文件或目录">
+<meta name="twitter:description" content="普通版：建立软连接123ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublimeln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/local/bin/atomln -s /Applications/Visual\">
 
 
 
@@ -134,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/2017/09/10/解决screen断开后连不上的问题/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/"/>
 
 
 
 
 
-  <title>解决screen断开后连不上的问题 | Zewail's Blog</title>
+  <title>Mac命令行用sublime、vscode、atom命令打开文件或目录 | Zewail's Blog</title>
   
 
 
@@ -273,7 +273,7 @@
   
   
   <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/10/解决screen断开后连不上的问题/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/09/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="Chan Zewail">
@@ -290,7 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">解决screen断开后连不上的问题</h1>
+          <h1 class="post-title" itemprop="name headline">Mac命令行用sublime、vscode、atom命令打开文件或目录</h1>
         
 
         <div class="post-meta">
@@ -302,8 +302,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-10T22:38:48+08:00">
-                2017-09-10
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-09-11T01:04:21+08:00">
+                2017-09-11
               </time>
             
 
@@ -325,8 +325,8 @@
               
               
                 <span itemprop="about" itemscope itemtype="http://schema.org/Thing">
-                  <a href="/categories/Linux/" itemprop="url" rel="index">
-                    <span itemprop="name">Linux</span>
+                  <a href="/categories/Mac/" itemprop="url" rel="index">
+                    <span itemprop="name">Mac</span>
                   </a>
                 </span>
 
@@ -362,10 +362,12 @@
       
 
       
-        <p>当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。</p>
-<p>下面给出解决方法：</p>
-<p>列出状态为Attached的session id：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">screen -ls</div></pre></td></tr></table></figure></p>
-<p>先踢掉前一用户，再登陆<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">screen -D  -r ＜session-id&gt;</div></pre></td></tr></table></figure></p>
+        <h3 id="普通版：建立软连接"><a href="#普通版：建立软连接" class="headerlink" title="普通版：建立软连接"></a>普通版：建立软连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/<span class="built_in">local</span>/bin/sublime</div><div class="line">ln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/<span class="built_in">local</span>/bin/atom</div><div class="line">ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/<span class="built_in">local</span>/bin/vscode</div></pre></td></tr></table></figure>
+<h3 id="zsh版：alias"><a href="#zsh版：alias" class="headerlink" title="zsh版：alias"></a>zsh版：alias</h3><p>编辑<code>.zsh</code>配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.zshrc</div></pre></td></tr></table></figure></p>
+<p>添加<code>alias</code>别名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alias sublime=&apos;/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl&apos;</div><div class="line">alias atom=&apos;/Applications/Atom.app/Contents/MacOS/Atom&apos;</div><div class="line">alias vscode=&apos;/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code&apos;</div></pre></td></tr></table></figure></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>打开文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sublime example.js</div><div class="line">atom example.js</div><div class="line">vscode example.js</div></pre></td></tr></table></figure>
+<p>打开当前目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sublime .</div><div class="line">atom .</div><div class="line">vscode .</div></pre></td></tr></table></figure></p>
 
       
     </div>
@@ -383,7 +385,9 @@
       
         <div class="post-tags">
           
-            <a href="/tags/linux/" rel="tag"># linux</a>
+            <a href="/tags/mac/" rel="tag"># mac</a>
+          
+            <a href="/tags/sublime/" rel="tag"># sublime</a>
           
         </div>
       
@@ -396,8 +400,8 @@
         <div class="post-nav">
           <div class="post-nav-next post-nav-item">
             
-              <a href="/2017/09/10/LNMP安装PHP-fileinfo扩展模块/" rel="next" title="LNMP安装PHP fileinfo扩展模块">
-                <i class="fa fa-chevron-left"></i> LNMP安装PHP fileinfo扩展模块
+              <a href="/2017/09/10/解决screen断开后连不上的问题/" rel="next" title="解决screen断开后连不上的问题">
+                <i class="fa fa-chevron-left"></i> 解决screen断开后连不上的问题
               </a>
             
           </div>
@@ -405,10 +409,6 @@
           <span class="post-nav-divider"></span>
 
           <div class="post-nav-prev post-nav-item">
-            
-              <a href="/2017/09/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/" rel="prev" title="Mac命令行用sublime、vscode、atom命令打开文件或目录">
-                Mac命令行用sublime、vscode、atom命令打开文件或目录 <i class="fa fa-chevron-right"></i>
-              </a>
             
           </div>
         </div>
@@ -460,8 +460,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -561,6 +570,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#普通版：建立软连接"><span class="nav-number">1.</span> <span class="nav-text">普通版：建立软连接</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#zsh版：alias"><span class="nav-number">2.</span> <span class="nav-text">zsh版：alias</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#使用"><span class="nav-number">3.</span> <span class="nav-text">使用</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
