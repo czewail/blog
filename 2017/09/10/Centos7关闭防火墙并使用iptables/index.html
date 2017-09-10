@@ -78,7 +78,7 @@
 <link href="/css/main.css?v=5.1.2" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="zewail blog chanzewail 陈泽韦 博客" />
+  <meta name="keywords" content="centos," />
 
 
 
@@ -94,13 +94,18 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="Zewail&#39;s Blog">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="关闭防火墙关闭firewall1systemctl stop firewalld.service 禁止firewall开机启动1systemctl disable firewalld.service 安装iptables1yum -y install iptables-services 修改iptables配置1vi /etc/sysconfig/iptables 看情况增加规则，例如：1-A I">
+<meta name="keywords" content="centos">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Centos7关闭防火墙并使用iptables">
+<meta property="og:url" content="http://yoursite.com/2017/09/10/Centos7关闭防火墙并使用iptables/index.html">
 <meta property="og:site_name" content="Zewail&#39;s Blog">
+<meta property="og:description" content="关闭防火墙关闭firewall1systemctl stop firewalld.service 禁止firewall开机启动1systemctl disable firewalld.service 安装iptables1yum -y install iptables-services 修改iptables配置1vi /etc/sysconfig/iptables 看情况增加规则，例如：1-A I">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-09-10T14:29:38.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Zewail&#39;s Blog">
+<meta name="twitter:title" content="Centos7关闭防火墙并使用iptables">
+<meta name="twitter:description" content="关闭防火墙关闭firewall1systemctl stop firewalld.service 禁止firewall开机启动1systemctl disable firewalld.service 安装iptables1yum -y install iptables-services 修改iptables配置1vi /etc/sysconfig/iptables 看情况增加规则，例如：1-A I">
 
 
 
@@ -129,13 +134,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/09/10/Centos7关闭防火墙并使用iptables/"/>
 
 
 
 
 
-  <title>Zewail's Blog</title>
+  <title>Centos7关闭防火墙并使用iptables | Zewail's Blog</title>
   
 
 
@@ -160,9 +165,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-   page-home 
- ">
+  <div class="container sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -255,9 +258,9 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -287,9 +290,7 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                <a class="post-title-link" href="/2017/09/10/Centos7关闭防火墙并使用iptables/" itemprop="url">Centos7关闭防火墙并使用iptables</a></h1>
+          <h1 class="post-title" itemprop="name headline">Centos7关闭防火墙并使用iptables</h1>
         
 
         <div class="post-meta">
@@ -372,9 +373,7 @@
       
 
       
-        
-          
-            <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>关闭firewall<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
+        <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>关闭firewall<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
 <p>禁止firewall开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">disable</span> firewalld.service</div></pre></td></tr></table></figure></p>
 <h3 id="安装iptables"><a href="#安装iptables" class="headerlink" title="安装iptables"></a>安装iptables</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install iptables-services</div></pre></td></tr></table></figure>
 <h3 id="修改iptables配置"><a href="#修改iptables配置" class="headerlink" title="修改iptables配置"></a>修改iptables配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
@@ -383,8 +382,6 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart iptables.service</div></pre></td></tr></table></figure>
 <p>设置iptables开机启动</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> iptables.service</div></pre></td></tr></table></figure>
-          
-        
       
     </div>
     
@@ -399,14 +396,20 @@
 
     <footer class="post-footer">
       
+        <div class="post-tags">
+          
+            <a href="/tags/centos/" rel="tag"># centos</a>
+          
+        </div>
+      
+
+      
+      
+      
 
       
 
       
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -416,10 +419,11 @@
   </article>
 
 
-    
-  </section>
 
-  
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -427,6 +431,10 @@
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -447,8 +455,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
                src="/images/avatar.jpg"
@@ -548,6 +565,22 @@
 
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#关闭防火墙"><span class="nav-number">1.</span> <span class="nav-text">关闭防火墙</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#安装iptables"><span class="nav-number">2.</span> <span class="nav-text">安装iptables</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#修改iptables配置"><span class="nav-number">3.</span> <span class="nav-text">修改iptables配置</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#重启iptables并配置iptables开机启动"><span class="nav-number">4.</span> <span class="nav-text">重启iptables并配置iptables开机启动</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -661,10 +694,10 @@
   
 
   
-    <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.2"></script>
 <script type="text/javascript" src="/js/src/post-details.js?v=5.1.2"></script>
 
-  
+
 
   
 
