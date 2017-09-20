@@ -406,7 +406,7 @@
             
                 <div class="postShorten-content" itemprop="articleBody">
                     <h1 id="CSS优先级机制"><a href="#CSS优先级机制" class="headerlink" title="CSS优先级机制"></a>CSS优先级机制</h1><h3 id="样式优先级"><a href="#样式优先级" class="headerlink" title="样式优先级"></a>样式优先级</h3><p>外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况<br>一般情况下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">（外部样式）External style sheet &lt;（内部样式）Internal style sheet &lt;（内联样式）Inline style</div></pre></td></tr></table></figure></p>
-<p>注意，有一个例外的情况，当外部样式放在内部样式的后面，则外部样式将覆盖内部样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="css">      <span class="comment">/* 内部样式 */</span></span></div><div class="line"><span class="css">      <span class="selector-tag">h1</span>&#123; <span class="attribute">color</span>:red; &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 外部样式 style.css --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">      style.css内容：</span></div><div class="line"><span class="comment">      h1 &#123; color: green; &#125;</span></div><div class="line"><span class="comment">    --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>注意，有一个例外的情况，当外部样式放在内部样式的后面，则外部样式将覆盖内部样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">      /* 内部样式 */</span></div><div class="line"><span class="undefined">      h1&#123; color:red; &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 外部样式 style.css --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">      style.css内容：</span></div><div class="line"><span class="comment">      h1 &#123; color: green; &#125;</span></div><div class="line"><span class="comment">    --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h3 id="CSS优先级法则"><a href="#CSS优先级法则" class="headerlink" title="CSS优先级法则"></a>CSS优先级法则</h3><h4 id="不同级别"><a href="#不同级别" class="headerlink" title="不同级别"></a>不同级别</h4><ol>
 <li>!important的样式会覆盖页面内任何位置定义的样式</li>
 <li>作为style属性写在元素内的样式</li>
@@ -432,6 +432,70 @@
                     
                         <p>
                             <a href="/2017/04/13/CSS-优先级机制/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2016/11/03/CSS-选择器详解/">
+                            CSS 选择器详解
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2016-11-03T00:23:29+08:00">
+	
+		    11月 03, 2016
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/CSS/">CSS</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#元素选择器"><span class="toc-text">元素选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类选择器"><span class="toc-text">类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单类选择器"><span class="toc-text">单类选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多类选择器"><span class="toc-text">多类选择器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID选择器"><span class="toc-text">ID选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性选择器"><span class="toc-text">属性选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简单属性选择"><span class="toc-text">简单属性选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具体属性值选择"><span class="toc-text">具体属性值选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#部分属性值选择"><span class="toc-text">部分属性值选择</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#子串匹配属性选择"><span class="toc-text">子串匹配属性选择</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特定属性选择"><span class="toc-text">特定属性选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#派生选择器"><span class="toc-text">派生选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#后代选择器"><span class="toc-text">后代选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子元素选择器"><span class="toc-text">子元素选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相邻兄弟选择器"><span class="toc-text">相邻兄弟选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#几种派生选择器的结合使用"><span class="toc-text">几种派生选择器的结合使用</span></a></li></ol></li></ol>
+<h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><p>单个元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>多个元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span>, <span class="selector-tag">p</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>所有元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><h4 id="单类选择器"><a href="#单类选择器" class="headerlink" title="单类选择器"></a>单类选择器</h4><p>匹配所有元素下的类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;span class="item"&gt;&lt;/span&gt; */</span></div><div class="line"><span class="selector-class">.item</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>匹配某种元素下的类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;span class="item"&gt;&lt;/span&gt; */</span></div><div class="line"><span class="selector-tag">span</span><span class="selector-class">.item</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="多类选择器"><a href="#多类选择器" class="headerlink" title="多类选择器"></a>多类选择器</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;p class="item red"&gt;&lt;/p&gt; */</span></div><div class="line"><span class="selector-class">.item</span><span class="selector-class">.red</span> &#123;&#125;</div><div class="line"><span class="selector-tag">p</span><span class="selector-class">.item</span><span class="selector-class">.red</span> &#123;&#125;</div></pre></td></tr></table></figure>
+<h3 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h3><p>一个ID值在一个HTML文档中只能出现一次, 也就是一个ID只能唯一标识一个元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;p id="content"&gt;...&lt;/p&gt; */</span></div><div class="line"><span class="selector-id">#content</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><h4 id="简单属性选择"><a href="#简单属性选择" class="headerlink" title="简单属性选择"></a>简单属性选择</h4><p><code>元素名[属性名] 或 *[属性名]</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有带有alt属性的img标签 */</span></div><div class="line"><span class="selector-tag">img</span><span class="selector-attr">[alt]</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择所有带有href和title属性的a标签 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[href]</span><span class="selector-attr">[title]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="具体属性值选择"><a href="#具体属性值选择" class="headerlink" title="具体属性值选择"></a>具体属性值选择</h4><p>属性值必须完全匹配<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有class为item并且title为zewail的a标签 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[class="item"]</span><span class="selector-attr">[title="zewail"]</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择所有type为text并且具有readonly属性的input标签 */</span></div><div class="line"><span class="selector-tag">input</span><span class="selector-attr">[type="text"]</span><span class="selector-attr">[readonly]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="部分属性值选择"><a href="#部分属性值选择" class="headerlink" title="部分属性值选择"></a>部分属性值选择</h4><p>根据属性值中的词列表的某个词进行选择<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有class中带有item的p标签 */</span></div><div class="line"><span class="comment">/* 等价于 p.item &#123;&#125; */</span></div><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[class~="item"]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="子串匹配属性选择"><a href="#子串匹配属性选择" class="headerlink" title="子串匹配属性选择"></a>子串匹配属性选择</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* title以item开头的a元素 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[title^="item"]</span> &#123;&#125;</div><div class="line"><span class="comment">/* title以item结尾的a元素 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[title$="item"]</span> &#123;&#125;  </div><div class="line"><span class="comment">/* title中包含"item"子串的a元素 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[title*="item"]</span> &#123;&#125;</div></pre></td></tr></table></figure>
+<h4 id="特定属性选择"><a href="#特定属性选择" class="headerlink" title="特定属性选择"></a>特定属性选择</h4><p>常见于语言选择<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择 lang 属性等于 en 或以 en- 开头的所有元素 */</span></div><div class="line">*<span class="selector-attr">[lang|="en"]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="派生选择器"><a href="#派生选择器" class="headerlink" title="派生选择器"></a>派生选择器</h3><h4 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择body下的所有li，不论他们之间相隔的代数有多少 */</span></div><div class="line"><span class="selector-tag">body</span> <span class="selector-tag">li</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择拥有item类的元素的li后代 */</span></div><div class="line"><span class="selector-class">.item</span> <span class="selector-tag">li</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择拥有warning类的div元素的li后代 */</span></div><div class="line"><span class="selector-tag">div</span><span class="selector-class">.item</span> <span class="selector-tag">li</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择div下的li下的a标签 */</span></div><div class="line"><span class="selector-tag">div</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;&#125;</div></pre></td></tr></table></figure>
+<h4 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h4><p>选择某元素的直接后代，不能跨代选取<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有ul元素的直接li子元素 */</span></div><div class="line"><span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="相邻兄弟选择器"><a href="#相邻兄弟选择器" class="headerlink" title="相邻兄弟选择器"></a>相邻兄弟选择器</h4><p>选取某个元素的相邻兄弟元素，选取的是紧跟在后面的兄弟元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选取紧跟在h1标签后面的p标签 */</span></div><div class="line"><span class="selector-tag">h1</span> + <span class="selector-tag">p</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="几种派生选择器的结合使用"><a href="#几种派生选择器的结合使用" class="headerlink" title="几种派生选择器的结合使用"></a>几种派生选择器的结合使用</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* html元素的body子元素中，所有拥有item类的li元素的相邻兄弟元素 */</span></div><div class="line"><span class="selector-tag">html</span> &gt; <span class="selector-tag">body</span> <span class="selector-tag">li</span><span class="selector-class">.item</span> + <span class="selector-tag">li</span> &#123;&#125;</div></pre></td></tr></table></figure>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2016/11/03/CSS-选择器详解/#post-footer" class="postShorten-excerpt_link link">
                                 评论和共享
                             </a>
                         </p>
@@ -519,6 +583,25 @@
         <div class="modal-body">
             <div class="no-result text-color-light text-center">没有找到文章</div>
             <div class="results">
+                
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://www.zewail.me/2016/11/03/CSS-选择器详解/">
+                            <h3 class="media-heading">CSS 选择器详解</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年11月3日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
                 
                 <div class="media">
                     
@@ -691,25 +774,6 @@
                     <hr>
                 </div>
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://www.zewail.me/2017/08/12/基本数据类型的一些概念/">
-                            <h3 class="media-heading">基本数据类型的一些概念</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    2017年8月12日
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
             </div>
         </div>
         <div class="modal-footer">
@@ -717,7 +781,7 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 10 篇文章
+                找到 11 篇文章
             </p>
         </div>
     </div>

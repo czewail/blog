@@ -6,25 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Zewail的博客">
-    <title>Centos7关闭防火墙并使用iptables - Zewail的博客</title>
+    <title>CSS 选择器详解 - Zewail的博客</title>
     <meta name="author" content="Zewail">
     
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="关闭防火墙关闭firewall1systemctl stop firewalld.service 禁止firewall开机启动1systemctl disable firewalld.service 安装iptables1yum -y install iptables-services 修改iptables配置1vi /etc/sysconfig/iptables 看情况增加规则，例如：1-A I">
-<meta name="keywords" content="centos,linux">
+    <meta name="description" content="元素选择器单个元素1p &amp;#123;&amp;#125; 多个元素1h1, h2, h3, h4, h5, h6, p &amp;#123;&amp;#125; 所有元素1* &amp;#123;&amp;#125; 类选择器单类选择器匹配所有元素下的类12/* &amp;lt;span class=&quot;item&quot;&amp;gt;&amp;lt;/span&amp;gt; */.item &amp;#123;&amp;#125; 匹配某种元素下的类12/* &amp;lt;span clas">
+<meta name="keywords" content="css">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="Centos7关闭防火墙并使用iptables">
-<meta property="og:url" content="http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/index.html">
+<meta property="og:title" content="CSS 选择器详解">
+<meta property="og:url" content="http://www.zewail.me/2016/11/03/CSS-选择器详解/index.html">
 <meta property="og:site_name" content="Zewail的博客">
-<meta property="og:description" content="关闭防火墙关闭firewall1systemctl stop firewalld.service 禁止firewall开机启动1systemctl disable firewalld.service 安装iptables1yum -y install iptables-services 修改iptables配置1vi /etc/sysconfig/iptables 看情况增加规则，例如：1-A I">
+<meta property="og:description" content="元素选择器单个元素1p &amp;#123;&amp;#125; 多个元素1h1, h2, h3, h4, h5, h6, p &amp;#123;&amp;#125; 所有元素1* &amp;#123;&amp;#125; 类选择器单类选择器匹配所有元素下的类12/* &amp;lt;span class=&quot;item&quot;&amp;gt;&amp;lt;/span&amp;gt; */.item &amp;#123;&amp;#125; 匹配某种元素下的类12/* &amp;lt;span clas">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-20T15:18:22.000Z">
+<meta property="og:updated_time" content="2017-09-20T16:32:25.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Centos7关闭防火墙并使用iptables">
-<meta name="twitter:description" content="关闭防火墙关闭firewall1systemctl stop firewalld.service 禁止firewall开机启动1systemctl disable firewalld.service 安装iptables1yum -y install iptables-services 修改iptables配置1vi /etc/sysconfig/iptables 看情况增加规则，例如：1-A I">
+<meta name="twitter:title" content="CSS 选择器详解">
+<meta name="twitter:description" content="元素选择器单个元素1p &amp;#123;&amp;#125; 多个元素1h1, h2, h3, h4, h5, h6, p &amp;#123;&amp;#125; 所有元素1* &amp;#123;&amp;#125; 类选择器单类选择器匹配所有元素下的类12/* &amp;lt;span class=&quot;item&quot;&amp;gt;&amp;lt;/span&amp;gt; */.item &amp;#123;&amp;#125; 匹配某种元素下的类12/* &amp;lt;span clas">
     
     
         
@@ -248,20 +248,20 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            Centos7关闭防火墙并使用iptables
+            CSS 选择器详解
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-01-10T22:24:13+08:00">
+    <time itemprop="datePublished" datetime="2016-11-03T00:23:29+08:00">
 	
-		    1月 10, 2017
+		    11月 03, 2016
     	
     </time>
     
         <span>发布在 </span>
         
-    <a class="category-link" href="/categories/Linux/">Linux</a>, <a class="category-link" href="/categories/Linux/CentOS/">CentOS</a>
+    <a class="category-link" href="/categories/CSS/">CSS</a>
 
 
     
@@ -272,15 +272,24 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>关闭firewall<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
-<p>禁止firewall开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">disable</span> firewalld.service</div></pre></td></tr></table></figure></p>
-<h3 id="安装iptables"><a href="#安装iptables" class="headerlink" title="安装iptables"></a>安装iptables</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install iptables-services</div></pre></td></tr></table></figure>
-<h3 id="修改iptables配置"><a href="#修改iptables配置" class="headerlink" title="修改iptables配置"></a>修改iptables配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
-<p>看情况增加规则，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT</div></pre></td></tr></table></figure></p>
-<h3 id="重启iptables并配置iptables开机启动"><a href="#重启iptables并配置iptables开机启动" class="headerlink" title="重启iptables并配置iptables开机启动"></a>重启iptables并配置iptables开机启动</h3><p>重启iptables</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart iptables.service</div></pre></td></tr></table></figure>
-<p>设置iptables开机启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> iptables.service</div></pre></td></tr></table></figure>
+            <h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#元素选择器"><span class="toc-text">元素选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#类选择器"><span class="toc-text">类选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#单类选择器"><span class="toc-text">单类选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#多类选择器"><span class="toc-text">多类选择器</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#ID选择器"><span class="toc-text">ID选择器</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#属性选择器"><span class="toc-text">属性选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#简单属性选择"><span class="toc-text">简单属性选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#具体属性值选择"><span class="toc-text">具体属性值选择</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#部分属性值选择"><span class="toc-text">部分属性值选择</span></a><ol class="toc-child"><li class="toc-item toc-level-5"><a class="toc-link" href="#子串匹配属性选择"><span class="toc-text">子串匹配属性选择</span></a></li></ol></li><li class="toc-item toc-level-4"><a class="toc-link" href="#特定属性选择"><span class="toc-text">特定属性选择</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#派生选择器"><span class="toc-text">派生选择器</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#后代选择器"><span class="toc-text">后代选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#子元素选择器"><span class="toc-text">子元素选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#相邻兄弟选择器"><span class="toc-text">相邻兄弟选择器</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#几种派生选择器的结合使用"><span class="toc-text">几种派生选择器的结合使用</span></a></li></ol></li></ol>
+<h3 id="元素选择器"><a href="#元素选择器" class="headerlink" title="元素选择器"></a>元素选择器</h3><p>单个元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">p</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>多个元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="selector-tag">h1</span>, <span class="selector-tag">h2</span>, <span class="selector-tag">h3</span>, <span class="selector-tag">h4</span>, <span class="selector-tag">h5</span>, <span class="selector-tag">h6</span>, <span class="selector-tag">p</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>所有元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">* &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="类选择器"><a href="#类选择器" class="headerlink" title="类选择器"></a>类选择器</h3><h4 id="单类选择器"><a href="#单类选择器" class="headerlink" title="单类选择器"></a>单类选择器</h4><p>匹配所有元素下的类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;span class="item"&gt;&lt;/span&gt; */</span></div><div class="line"><span class="selector-class">.item</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<p>匹配某种元素下的类<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;span class="item"&gt;&lt;/span&gt; */</span></div><div class="line"><span class="selector-tag">span</span><span class="selector-class">.item</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="多类选择器"><a href="#多类选择器" class="headerlink" title="多类选择器"></a>多类选择器</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;p class="item red"&gt;&lt;/p&gt; */</span></div><div class="line"><span class="selector-class">.item</span><span class="selector-class">.red</span> &#123;&#125;</div><div class="line"><span class="selector-tag">p</span><span class="selector-class">.item</span><span class="selector-class">.red</span> &#123;&#125;</div></pre></td></tr></table></figure>
+<h3 id="ID选择器"><a href="#ID选择器" class="headerlink" title="ID选择器"></a>ID选择器</h3><p>一个ID值在一个HTML文档中只能出现一次, 也就是一个ID只能唯一标识一个元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* &lt;p id="content"&gt;...&lt;/p&gt; */</span></div><div class="line"><span class="selector-id">#content</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="属性选择器"><a href="#属性选择器" class="headerlink" title="属性选择器"></a>属性选择器</h3><h4 id="简单属性选择"><a href="#简单属性选择" class="headerlink" title="简单属性选择"></a>简单属性选择</h4><p><code>元素名[属性名] 或 *[属性名]</code><br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有带有alt属性的img标签 */</span></div><div class="line"><span class="selector-tag">img</span><span class="selector-attr">[alt]</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择所有带有href和title属性的a标签 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[href]</span><span class="selector-attr">[title]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="具体属性值选择"><a href="#具体属性值选择" class="headerlink" title="具体属性值选择"></a>具体属性值选择</h4><p>属性值必须完全匹配<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有class为item并且title为zewail的a标签 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[class="item"]</span><span class="selector-attr">[title="zewail"]</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择所有type为text并且具有readonly属性的input标签 */</span></div><div class="line"><span class="selector-tag">input</span><span class="selector-attr">[type="text"]</span><span class="selector-attr">[readonly]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="部分属性值选择"><a href="#部分属性值选择" class="headerlink" title="部分属性值选择"></a>部分属性值选择</h4><p>根据属性值中的词列表的某个词进行选择<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有class中带有item的p标签 */</span></div><div class="line"><span class="comment">/* 等价于 p.item &#123;&#125; */</span></div><div class="line"><span class="selector-tag">p</span><span class="selector-attr">[class~="item"]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h5 id="子串匹配属性选择"><a href="#子串匹配属性选择" class="headerlink" title="子串匹配属性选择"></a>子串匹配属性选择</h5><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* title以item开头的a元素 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[title^="item"]</span> &#123;&#125;</div><div class="line"><span class="comment">/* title以item结尾的a元素 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[title$="item"]</span> &#123;&#125;  </div><div class="line"><span class="comment">/* title中包含"item"子串的a元素 */</span></div><div class="line"><span class="selector-tag">a</span><span class="selector-attr">[title*="item"]</span> &#123;&#125;</div></pre></td></tr></table></figure>
+<h4 id="特定属性选择"><a href="#特定属性选择" class="headerlink" title="特定属性选择"></a>特定属性选择</h4><p>常见于语言选择<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择 lang 属性等于 en 或以 en- 开头的所有元素 */</span></div><div class="line">*<span class="selector-attr">[lang|="en"]</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h3 id="派生选择器"><a href="#派生选择器" class="headerlink" title="派生选择器"></a>派生选择器</h3><h4 id="后代选择器"><a href="#后代选择器" class="headerlink" title="后代选择器"></a>后代选择器</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择body下的所有li，不论他们之间相隔的代数有多少 */</span></div><div class="line"><span class="selector-tag">body</span> <span class="selector-tag">li</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择拥有item类的元素的li后代 */</span></div><div class="line"><span class="selector-class">.item</span> <span class="selector-tag">li</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择拥有warning类的div元素的li后代 */</span></div><div class="line"><span class="selector-tag">div</span><span class="selector-class">.item</span> <span class="selector-tag">li</span> &#123;&#125;</div><div class="line"><span class="comment">/* 选择div下的li下的a标签 */</span></div><div class="line"><span class="selector-tag">div</span> <span class="selector-tag">li</span> <span class="selector-tag">a</span> &#123;&#125;</div></pre></td></tr></table></figure>
+<h4 id="子元素选择器"><a href="#子元素选择器" class="headerlink" title="子元素选择器"></a>子元素选择器</h4><p>选择某元素的直接后代，不能跨代选取<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选择所有ul元素的直接li子元素 */</span></div><div class="line"><span class="selector-tag">ul</span> &gt; <span class="selector-tag">li</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="相邻兄弟选择器"><a href="#相邻兄弟选择器" class="headerlink" title="相邻兄弟选择器"></a>相邻兄弟选择器</h4><p>选取某个元素的相邻兄弟元素，选取的是紧跟在后面的兄弟元素<br><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* 选取紧跟在h1标签后面的p标签 */</span></div><div class="line"><span class="selector-tag">h1</span> + <span class="selector-tag">p</span> &#123;&#125;</div></pre></td></tr></table></figure></p>
+<h4 id="几种派生选择器的结合使用"><a href="#几种派生选择器的结合使用" class="headerlink" title="几种派生选择器的结合使用"></a>几种派生选择器的结合使用</h4><figure class="highlight css"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment">/* html元素的body子元素中，所有拥有item类的li元素的相邻兄弟元素 */</span></div><div class="line"><span class="selector-tag">html</span> &gt; <span class="selector-tag">body</span> <span class="selector-tag">li</span><span class="selector-class">.item</span> + <span class="selector-tag">li</span> &#123;&#125;</div></pre></td></tr></table></figure>
+
             
         </div>
     </div>
@@ -289,7 +298,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">标签</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/centos/">centos</a> <a class="tag tag--primary tag--small t-link" href="/tags/linux/">linux</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/css/">css</a>
 
             </div>
         
@@ -299,7 +308,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/11/CentOS7上搭建Shadowsocks服务端/"  data-tooltip="CentOS上搭建Shadowsocks服务端">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/10/Centos7关闭防火墙并使用iptables/"  data-tooltip="Centos7关闭防火墙并使用iptables">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -307,7 +316,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/03/CSS-选择器详解/" data-tooltip="CSS 选择器详解">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -325,7 +334,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -333,7 +342,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -341,7 +350,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -349,7 +358,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-weibo"></i>
                 </a>
             </li>
@@ -357,7 +366,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/&amp;title=Centos7关闭防火墙并使用iptables">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/&amp;title=CSS 选择器详解">
                     <i class="fa fa-qq"></i>
                 </a>
             </li>
@@ -365,7 +374,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-star"></i>
                 </a>
             </li>
@@ -373,7 +382,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
@@ -405,7 +414,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/11/CentOS7上搭建Shadowsocks服务端/"  data-tooltip="CentOS上搭建Shadowsocks服务端">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/10/Centos7关闭防火墙并使用iptables/"  data-tooltip="Centos7关闭防火墙并使用iptables">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -413,7 +422,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2016/11/03/CSS-选择器详解/" data-tooltip="CSS 选择器详解">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -431,7 +440,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -439,7 +448,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -447,7 +456,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -455,7 +464,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-weibo"></i>
                 </a>
             </li>
@@ -463,7 +472,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/&amp;title=Centos7关闭防火墙并使用iptables">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/&amp;title=CSS 选择器详解">
                     <i class="fa fa-qq"></i>
                 </a>
             </li>
@@ -471,7 +480,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-star"></i>
                 </a>
             </li>
@@ -479,7 +488,7 @@
         
         <li class="post-action">
             
-                <a class="post-action-btn btn btn--default" href="#">
+                <a class="post-action-btn btn btn--default" href="#table-of-contents">
             
                 <i class="fa fa-list"></i>
             </a>
@@ -496,7 +505,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
                 </a>
             </li>
@@ -504,7 +513,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
                 </a>
             </li>
@@ -512,7 +521,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
                 </a>
             </li>
@@ -520,7 +529,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-weibo"></i><span>分享到 Weibo</span>
                 </a>
             </li>
@@ -528,7 +537,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/&amp;title=Centos7关闭防火墙并使用iptables">
+                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/&amp;title=CSS 选择器详解">
                     <i class="fa fa-qq"></i><span>分享到 QQ</span>
                 </a>
             </li>
@@ -536,7 +545,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2016/11/03/CSS-选择器详解/">
                     <i class="fa fa-star"></i><span>分享到 Qzone</span>
                 </a>
             </li>

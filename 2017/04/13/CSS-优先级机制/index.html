@@ -273,7 +273,7 @@
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
             <h1 id="CSS优先级机制"><a href="#CSS优先级机制" class="headerlink" title="CSS优先级机制"></a>CSS优先级机制</h1><h3 id="样式优先级"><a href="#样式优先级" class="headerlink" title="样式优先级"></a>样式优先级</h3><p>外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况<br>一般情况下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">（外部样式）External style sheet &lt;（内部样式）Internal style sheet &lt;（内联样式）Inline style</div></pre></td></tr></table></figure></p>
-<p>注意，有一个例外的情况，当外部样式放在内部样式的后面，则外部样式将覆盖内部样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="css">      <span class="comment">/* 内部样式 */</span></span></div><div class="line"><span class="css">      <span class="selector-tag">h1</span>&#123; <span class="attribute">color</span>:red; &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 外部样式 style.css --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">      style.css内容：</span></div><div class="line"><span class="comment">      h1 &#123; color: green; &#125;</span></div><div class="line"><span class="comment">    --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>注意，有一个例外的情况，当外部样式放在内部样式的后面，则外部样式将覆盖内部样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">      /* 内部样式 */</span></div><div class="line"><span class="undefined">      h1&#123; color:red; &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 外部样式 style.css --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">      style.css内容：</span></div><div class="line"><span class="comment">      h1 &#123; color: green; &#125;</span></div><div class="line"><span class="comment">    --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h3 id="CSS优先级法则"><a href="#CSS优先级法则" class="headerlink" title="CSS优先级法则"></a>CSS优先级法则</h3><h4 id="不同级别"><a href="#不同级别" class="headerlink" title="不同级别"></a>不同级别</h4><ol>
 <li>!important的样式会覆盖页面内任何位置定义的样式</li>
 <li>作为style属性写在元素内的样式</li>
@@ -618,6 +618,25 @@
                 <div class="media">
                     
                     <div class="media-body">
+                        <a class="link-unstyled" href="http://www.zewail.me/2016/11/03/CSS-选择器详解/">
+                            <h3 class="media-heading">CSS 选择器详解</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2016年11月3日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
                         <a class="link-unstyled" href="http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/">
                             <h3 class="media-heading">Centos7关闭防火墙并使用iptables</h3>
                         </a>
@@ -786,25 +805,6 @@
                     <hr>
                 </div>
                 
-                <div class="media">
-                    
-                    <div class="media-body">
-                        <a class="link-unstyled" href="http://www.zewail.me/2017/08/12/基本数据类型的一些概念/">
-                            <h3 class="media-heading">基本数据类型的一些概念</h3>
-                        </a>
-                        <span class="media-meta">
-                            <span class="media-date text-small">
-                                
-                                    2017年8月12日
-                                
-                            </span>
-                        </span>
-                        <div class="media-content hide-xs font-merryweather"></div>
-                    </div>
-                    <div style="clear:both;"></div>
-                    <hr>
-                </div>
-                
             </div>
         </div>
         <div class="modal-footer">
@@ -812,7 +812,7 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 10 篇文章
+                找到 11 篇文章
             </p>
         </div>
     </div>
