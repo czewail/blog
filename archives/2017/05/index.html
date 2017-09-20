@@ -246,6 +246,89 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2017/05/20/闭包的好处及坏处/">
+                            闭包的好处及坏处
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-05-20T23:53:44+08:00">
+	
+		    5月 20, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Javascript/">Javascript</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-3"><a class="toc-link" href="#概念"><span class="toc-text">概念</span></a></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包的好处"><span class="toc-text">闭包的好处</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#缓存"><span class="toc-text">缓存</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#面向对象中的对象"><span class="toc-text">面向对象中的对象</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#实现封装"><span class="toc-text">实现封装</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#匿名自执行函数"><span class="toc-text">匿名自执行函数</span></a></li></ol></li><li class="toc-item toc-level-3"><a class="toc-link" href="#闭包的坏处"><span class="toc-text">闭包的坏处</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#内存消耗"><span class="toc-text">内存消耗</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#性能问题"><span class="toc-text">性能问题</span></a></li></ol></li></ol>
+<h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>闭包javascript 是最强大的特征之一，它允许函数访问局部作用域之外的函数</p>
+<p>创建闭包的常见方式：就是在一个函数里创建另一个函数<br><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span>  <span class="title">fun</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="function"><span class="keyword">function</span></span>&#123;</div><div class="line">    <span class="built_in">console</span>.log(<span class="string">"hello"</span>);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>作用域链的本质是指向一个变量对象的指针列表，它只引用但不实际包含变量对象。一般来讲，当函数执行完毕后，局部活动对象就会销毁，内存仅保存全局作用域。但是，闭包的情况不同，closure函数执行完毕后，其活动对象不会销毁，因为匿名函数的作用域链仍然引用这个活动对象。直到匿名函数被销毁后，closure函数的活动对象才会被销毁。由于闭包会携带包含它的函数的作用域，因此会占用更多的内存，过度的使用闭包会导致内存占用过多，因此，在绝对必要时，再考虑使用闭包。</p>
+<h3 id="闭包的好处"><a href="#闭包的好处" class="headerlink" title="闭包的好处"></a>闭包的好处</h3><p>闭包的好处有：</p>
+<ol>
+<li>缓存</li>
+<li>面向对象中的对象</li>
+<li>实现封装，防止变量跑到外层作用域中，发生命名冲突</li>
+<li>匿名自执行函数，匿名自执行函数可以减小内存消耗</li>
+</ol>
+<h4 id="缓存"><a href="#缓存" class="headerlink" title="缓存"></a>缓存</h4><p>设想我们有一个处理过程很耗时的函数对象，每次调用都会花费很长时间，那么我们就需要将计算出来的值存储起来，当调用这个函数的时候，首先在缓存中查找，如果找到，则进行计算，然后更新缓存并返回值，如果找到了，直接返回查找到的值即可。闭包正是可以做到这一点，因为它不会释放外部的引用，从而函数内部的值可以得以保留。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> CachedSearchBox = (<span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </div><div class="line">    <span class="keyword">var</span> cache = &#123;&#125;,    </div><div class="line">        count = [];    </div><div class="line">    <span class="keyword">return</span> &#123;    </div><div class="line">       attachSearchBox : <span class="function"><span class="keyword">function</span>(<span class="params">dsid</span>)</span>&#123;    </div><div class="line">           <span class="keyword">if</span>(dsid <span class="keyword">in</span> cache)&#123;<span class="comment">//如果结果在缓存中    </span></div><div class="line">              <span class="keyword">return</span> cache[dsid];<span class="comment">//直接返回缓存中的对象    </span></div><div class="line">           &#125;    </div><div class="line">           <span class="keyword">var</span> fsb = <span class="keyword">new</span> uikit.webctrl.SearchBox(dsid);<span class="comment">//新建    </span></div><div class="line">           cache[dsid] = fsb;<span class="comment">//更新缓存    </span></div><div class="line">           <span class="keyword">if</span>(count.length &gt; <span class="number">100</span>)&#123;<span class="comment">//保正缓存的大小&lt;=100    </span></div><div class="line">              <span class="keyword">delete</span> cache[count.shift()];    </div><div class="line">           &#125;    </div><div class="line">           <span class="keyword">return</span> fsb;          </div><div class="line">       &#125;,    </div><div class="line">       clearSearchBox : <span class="function"><span class="keyword">function</span>(<span class="params">dsid</span>)</span>&#123;    </div><div class="line">           <span class="keyword">if</span>(dsid <span class="keyword">in</span> cache)&#123;    </div><div class="line">              cache[dsid].clearSelection();      </div><div class="line">           &#125;    </div><div class="line">       &#125;    </div><div class="line">    &#125;;    </div><div class="line">&#125;)();</div><div class="line"></div><div class="line">CachedSearchBox.attachSearchBox(<span class="string">"input1"</span>);</div></pre></td></tr></table></figure>
+<p>这样，当我们第二次调用<code>CachedSearchBox.attachSerachBox(“input1”)</code>的时候，我们就可以从缓存中取道该对象，而不用再去创建一个新的<code>searchbox</code>对象。</p>
+<h4 id="面向对象中的对象"><a href="#面向对象中的对象" class="headerlink" title="面向对象中的对象"></a>面向对象中的对象</h4><p>传统的对象语言都提供类的模板机制，这样不同的对象(类的实例)拥有独立的成员及状态，互不干涉。虽然JavaScript中没有类这样的机制，但是通过使用闭包，我们可以模拟出这样的机制。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params"></span>)</span>&#123;    </div><div class="line">    <span class="keyword">var</span> name = <span class="string">"default"</span>;       </div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;    </div><div class="line">       getName : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </div><div class="line">           <span class="keyword">return</span> name;    </div><div class="line">       &#125;,    </div><div class="line">       setName : <span class="function"><span class="keyword">function</span>(<span class="params">newName</span>)</span>&#123;    </div><div class="line">           name = newName;    </div><div class="line">       &#125;    </div><div class="line">    &#125;    </div><div class="line">&#125;;</div><div class="line"><span class="keyword">var</span> john = Person();    </div><div class="line">print(john.getName());    </div><div class="line">john.setName(<span class="string">"john"</span>);    </div><div class="line">print(john.getName());    </div><div class="line"></div><div class="line"><span class="keyword">var</span> jack = Person();    </div><div class="line">print(jack.getName());    </div><div class="line">jack.setName(<span class="string">"jack"</span>);    </div><div class="line">print(jack.getName());    </div><div class="line"></div><div class="line"><span class="comment">// 运行结果如下：  </span></div><div class="line"></div><div class="line"><span class="comment">// default  </span></div><div class="line"><span class="comment">// john</span></div><div class="line"></div><div class="line"><span class="comment">// default  </span></div><div class="line"><span class="comment">// jack</span></div></pre></td></tr></table></figure>
+<h4 id="实现封装"><a href="#实现封装" class="headerlink" title="实现封装"></a>实现封装</h4><p>在person之外的地方无法访问其内部的变量，而通过提供闭包的形式可以来访问</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </div><div class="line">    <span class="comment">//变量作用域为函数内部，外部无法访问    </span></div><div class="line">    <span class="keyword">var</span> name = <span class="string">"default"</span>;       </div><div class="line"></div><div class="line">    <span class="keyword">return</span> &#123;    </div><div class="line">       getName : <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;    </div><div class="line">           <span class="keyword">return</span> name;    </div><div class="line">       &#125;,    </div><div class="line">       setName : <span class="function"><span class="keyword">function</span>(<span class="params">newName</span>)</span>&#123;    </div><div class="line">           name = newName;    </div><div class="line">       &#125;    </div><div class="line">    &#125;    </div><div class="line">&#125;();    </div><div class="line"></div><div class="line">print(person.name); <span class="comment">//直接访问，结果为undefined    </span></div><div class="line">print(person.getName());    </div><div class="line">person.setName(<span class="string">"zewail"</span>);    </div><div class="line">print(person.getName());    </div><div class="line"></div><div class="line">得到结果如下：  </div><div class="line"></div><div class="line"><span class="comment">// undefined  </span></div><div class="line"><span class="comment">// default  </span></div><div class="line"><span class="comment">// zewail</span></div></pre></td></tr></table></figure>
+<h4 id="匿名自执行函数"><a href="#匿名自执行函数" class="headerlink" title="匿名自执行函数"></a>匿名自执行函数</h4><p>我们知道所有的变量，如果不加上var关键字，则默认的会添加到全局对象的属性上去，这样的临时变量加入全局对象有很多坏处，比如：别的函数可能误用这些变量；造成全局对象过于庞大，影响访问速度(因为变量的取值是需要从原型链上遍历的)。除了每次使用变量都是用var关键字外，我们在实际情况下经常遇到这样一种情况，即有的函数只需要执行一次，其内部变量无需维护，比如UI的初始化，那么我们可以使用闭包</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> dataModel = &#123;    </div><div class="line">    table : [],    </div><div class="line">    tree : &#123;&#125;    </div><div class="line">&#125;;    </div><div class="line"></div><div class="line">(<span class="function"><span class="keyword">function</span>(<span class="params">dm</span>)</span>&#123;    </div><div class="line">    <span class="keyword">for</span>(<span class="keyword">var</span> i = <span class="number">0</span>; i &lt; dm.table.rows; i++)&#123;    </div><div class="line">       <span class="keyword">var</span> row = dm.table.rows[i];    </div><div class="line">       <span class="keyword">for</span>(<span class="keyword">var</span> j = <span class="number">0</span>; j &lt; row.cells; i++)&#123;    </div><div class="line">           drawCell(i, j);    </div><div class="line">       &#125;    </div><div class="line">    &#125;    </div><div class="line">    <span class="comment">//build dm.tree      </span></div><div class="line">&#125;)(dataModel);</div></pre></td></tr></table></figure>
+<p>我们创建了一个匿名的函数，并立即执行它，由于外部无法引用它内部的变量，因此在执行完后很快就会被释放，关键是这种机制不会污染全局对象。</p>
+<h3 id="闭包的坏处"><a href="#闭包的坏处" class="headerlink" title="闭包的坏处"></a>闭包的坏处</h3><p>闭包的坏处有：</p>
+<ol>
+<li>内存消耗</li>
+<li>性能问题</li>
+</ol>
+<h4 id="内存消耗"><a href="#内存消耗" class="headerlink" title="内存消耗"></a>内存消耗</h4><p>通常来说，函数的活动对象会随着执行期上下文一起销毁，但是，由于闭包引用另外一个函数的活动对象，因此这个活动对象无法被销毁，这意味着，闭包比一般的函数需要更多的内存消耗。</p>
+<p>注： 在IE9之前，如果闭包的作用域链中保存着一个HTML元素，那么意味着该元素无法被销毁。<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">closure</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"elementID"</span>);</div><div class="line">  element.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;</div><div class="line">    alert(element.id);</div><div class="line">  &#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>这里DOM对象element引用闭包函数，闭包函数作用域引用DOM对象，循环引用导致内存泄露。</p>
+<p>解决方法：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">closure</span>(<span class="params"></span>) </span>&#123;</div><div class="line">  <span class="keyword">var</span> element = <span class="built_in">document</span>.getElementById(<span class="string">"elementId"</span>);</div><div class="line">  <span class="keyword">var</span> id = element.id;</div><div class="line"></div><div class="line">  element.onclick = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">    alert(id);</div><div class="line">  &#125;</div><div class="line">  element = <span class="literal">null</span>;</div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>先把element.id用局部变量id保存起来，并且在闭包中引用该变量消除了循环引用。但是，这样还不能消除内存泄露，闭包会引用包含函数的活动变量，而其中会有element。即使闭包闭包不直接引用element，包含函数的活动对象仍然会保存一个引用，因此有必要把element设为null。</p>
+<h4 id="性能问题"><a href="#性能问题" class="headerlink" title="性能问题"></a>性能问题</h4><p>使用闭包时，会涉及到跨作用域访问，每次访问都会导致性能损失。因此在脚本中，最好小心使用闭包，它同时会涉及到内存和速度问题。不过我们可以通过把跨作用域变量存储在局部变量中，然后直接访问局部变量，来减轻对执行速度的影响。</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2017/05/20/闭包的好处及坏处/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2017/05/20/CSS3动画初识/">
                             CSS3动画初识
                         </a>
@@ -660,6 +743,25 @@
                 <div class="media">
                     
                     <div class="media-body">
+                        <a class="link-unstyled" href="http://www.zewail.me/2017/05/20/闭包的好处及坏处/">
+                            <h3 class="media-heading">闭包的好处及坏处</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年5月20日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
+                <div class="media">
+                    
+                    <div class="media-body">
                         <a class="link-unstyled" href="http://www.zewail.me/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
                             <h3 class="media-heading">Mac命令行用sublime、vscode、atom命令打开文件或目录</h3>
                         </a>
@@ -683,7 +785,7 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 8 篇文章
+                找到 9 篇文章
             </p>
         </div>
     </div>
