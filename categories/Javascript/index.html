@@ -6,23 +6,18 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Zewail的博客">
-    <title>解决screen断开后连不上的问题 - Zewail的博客</title>
+    <title>分类: Javascript - Zewail的博客</title>
     <meta name="author" content="Zewail">
     
     
     
-    <meta name="description" content="当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。 下面给出解决方法： 列出状态为Attached的session id：1screen -ls 先踢掉前一用户，再登陆1screen -D  -r ＜session-id&amp;gt;">
-<meta name="keywords" content="linux">
-<meta property="og:type" content="blog">
-<meta property="og:title" content="解决screen断开后连不上的问题">
-<meta property="og:url" content="http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/index.html">
+    <meta property="og:type" content="blog">
+<meta property="og:title" content="Zewail的博客">
+<meta property="og:url" content="http://www.zewail.me/categories/Javascript/index.html">
 <meta property="og:site_name" content="Zewail的博客">
-<meta property="og:description" content="当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。 下面给出解决方法： 列出状态为Attached的session id：1screen -ls 先踢掉前一用户，再登陆1screen -D  -r ＜session-id&amp;gt;">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-20T15:19:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="解决screen断开后连不上的问题">
-<meta name="twitter:description" content="当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。 下面给出解决方法： 列出状态为Attached的session id：1screen -ls 先踢掉前一用户，再登陆1screen -D  -r ＜session-id&amp;gt;">
+<meta name="twitter:title" content="Zewail的博客">
     
     
         
@@ -51,7 +46,7 @@
         
     
 
-<header id="header" data-behavior="4">
+<header id="header" data-behavior="1">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Zewail的博客</a>
@@ -75,7 +70,7 @@
         
     
 
-<nav id="sidebar" data-behavior="4">
+<nav id="sidebar" data-behavior="1">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -235,153 +230,93 @@
 </nav>
 
             
-            <div id="main" data-behavior="4"
+            <div id="main" data-behavior="1"
                  class="
                         hasCoverMetaIn
                         ">
                 
-<article class="post" itemscope itemType="http://schema.org/BlogPosting">
+    <section class="postShorten-group main-content-wrap">
     
     
-        <div class="post-header main-content-wrap text-left">
-    
-        <h1 class="post-title" itemprop="headline">
-            解决screen断开后连不上的问题
-        </h1>
-    
-    
-        <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-01-22T22:38:48+08:00">
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
+                        <a class="link-unstyled" href="/2017/05/11/原型与原型链的一些概念/">
+                            原型与原型链的一些概念
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-05-11T20:44:36+08:00">
 	
-		    1月 22, 2017
+		    5月 11, 2017
     	
     </time>
     
         <span>发布在 </span>
         
-    <a class="category-link" href="/categories/Linux/">Linux</a>
+    <a class="category-link" href="/categories/Javascript/">Javascript</a>
 
 
     
 </div>
-
-    
-</div>
-    
-    <div class="post-content markdown" itemprop="articleBody">
-        <div class="main-content-wrap">
-            <p>当你挂起screen，下次想连上screen的时候，有时候会出现screen session的状态为Attached而怎么连也连不上的情况。</p>
-<p>下面给出解决方法：</p>
-<p>列出状态为Attached的session id：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">screen -ls</div></pre></td></tr></table></figure></p>
-<p>先踢掉前一用户，再登陆<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">screen -D  -r ＜session-id&gt;</div></pre></td></tr></table></figure></p>
-
-            
-        </div>
-    </div>
-    <div id="post-footer" class="post-footer main-content-wrap">
-        
-            <div class="post-footer-tags">
-                <span class="text-color-light text-small">标签</span><br/>
-                
-    <a class="tag tag--primary tag--small t-link" href="/tags/linux/">linux</a>
 
             </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h2 id="普通对象与函数对象"><a href="#普通对象与函数对象" class="headerlink" title="普通对象与函数对象"></a>普通对象与函数对象</h2><p>先看栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div><div class="line">26</div><div class="line">27</div><div class="line">28</div><div class="line">29</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> test = &#123;&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> test) <span class="comment">// object</span></div><div class="line"></div><div class="line"><span class="comment">/*------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">fun</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="keyword">var</span> test = <span class="keyword">new</span> fun()</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> test) <span class="comment">// object</span></div><div class="line"></div><div class="line"><span class="comment">/*------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> test = <span class="keyword">new</span> <span class="built_in">Object</span>()</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> test) <span class="comment">// object</span></div><div class="line"></div><div class="line"><span class="comment">/*------------------------------------*/</span></div><div class="line"><span class="comment">/*------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">test</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> test) <span class="comment">// function</span></div><div class="line"></div><div class="line"><span class="comment">/*------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> test = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123;&#125;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> test) <span class="comment">// function</span></div><div class="line"></div><div class="line"><span class="comment">/*------------------------------------*/</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> test = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">'arg'</span>,<span class="string">'console.log(arg)'</span>);</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> test) <span class="comment">// function</span></div></pre></td></tr></table></figure>
+<p>总结：所有通过<code>new Function()</code>创建的对象都是函数对象，其他的都是普通对象。</p>
+<h2 id="构造函数"><a href="#构造函数" class="headerlink" title="构造函数"></a>构造函数</h2><p>先举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">Person</span>(<span class="params">name, age, job</span>) </span>&#123;</div><div class="line"> <span class="keyword">this</span>.name = name;</div><div class="line"> <span class="keyword">this</span>.age = age;</div><div class="line"> <span class="keyword">this</span>.sayName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>) </span>&#123; alert(<span class="keyword">this</span>.name) &#125;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> person1 = <span class="keyword">new</span> Person(<span class="string">'liming'</span>, <span class="number">28</span>, <span class="string">'Student'</span>);</div><div class="line"><span class="keyword">var</span> person2 = <span class="keyword">new</span> Person(<span class="string">'lily'</span>, <span class="number">23</span>, <span class="string">'Teacher'</span>);</div></pre></td></tr></table></figure>
+<p>person1 和 person2 都是 Person 的实例。这两个实例都有一个 constructor （构造函数）属性，该属性（是一个指针）指向 Person。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(person1.constructor == Person); <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(person2.constructor == Person); <span class="comment">//true</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>person1 和 person2 都是 构造函数 Person 的实例, 实例的构造函数属性（constructor）指向构造函数。</p>
+</blockquote>
+<h2 id="原型对象"><a href="#原型对象" class="headerlink" title="原型对象"></a>原型对象</h2><p>在JavaScript 中，每当定义一个对象时候，对象中都会包含一些预定义的属性。其中函数对象的一个属性就是原型对象 prototype, 这个属性指向函数的原型对象。</p>
+<blockquote>
+<p>注：普通对象没有prototype,但有<strong>proto</strong>属性。</p>
+</blockquote>
+<p>原型对象其实就是普通对象（Function.prototype除外,它是函数对象，但它很特殊，他没有prototype属性（前面说道函数对象都有prototype属性））。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">f1</span>(<span class="params"></span>)</span>&#123;&#125;;</div><div class="line"><span class="built_in">console</span>.log(f1.prototype) <span class="comment">// Object &#123;constructor: function&#125; f1.prototype就是 f1的一个实例对象。就是在f1创建的时候,创建了一个它的实例对象并赋值给它的prototype</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> f1.prototype) <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">Function</span>.prototype) <span class="comment">// function</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">Object</span>.prototype) <span class="comment">// object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="built_in">Function</span>.prototype.prototype) <span class="comment">//undefined</span></div></pre></td></tr></table></figure>
+<p>原型对象的主要作用是用于继承</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">　　<span class="keyword">this</span>.name = name</div><div class="line">&#125;;</div><div class="line">person.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> liming = <span class="keyword">new</span> person(<span class="string">'liming'</span>)</div><div class="line">liming.getName(); <span class="comment">//liming</span></div></pre></td></tr></table></figure>
+<p>从这个例子可以看出，通过给person.prototype设置了一个函数对象的属性，那有person实例出来的普通对象就继承了这个属性。</p>
+<h2 id="原型链"><a href="#原型链" class="headerlink" title="原型链"></a>原型链</h2><p>JS在创建对象（不论是普通对象还是函数对象）的时候，都有一个叫做<strong>proto</strong>的内置属性，用于指向创建它的函数对象的原型对象prototype。</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="function"><span class="keyword">function</span>(<span class="params">name</span>)</span>&#123;</div><div class="line">　　<span class="keyword">this</span>.name = name</div><div class="line">&#125;;</div><div class="line">person.prototype.getName = <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> <span class="keyword">this</span>.name;</div><div class="line">&#125;</div><div class="line"><span class="keyword">var</span> liming = <span class="keyword">new</span> person(<span class="string">'liming'</span>);</div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(liming.__proto__ === person.prototype) <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(person.prototype.__proto__ === <span class="built_in">Object</span>.prototype) <span class="comment">//true, person.prototype对象也有__proto__属性，它指向创建它的函数对象（Object）的prototype</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Object</span>.prototype.__proto__) <span class="comment">//null, Object.prototype对象也有__proto__属性，但它比较特殊，为null</span></div></pre></td></tr></table></figure>
+<p>我们把这个有<strong>proto</strong>串起来的直到<code>Object.prototype.__proto__</code>为null的链叫做原型链</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2017/05/11/原型与原型链的一些概念/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    <div class="pagination-bar">
+    <ul class="pagination">
         
         
-            <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/04/10/LNMP安装PHP-fileinfo扩展模块/"  data-tooltip="LNMP安装PHP fileinfo扩展模块">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/11/CentOS7上搭建Shadowsocks服务端/" data-tooltip="CentOS上搭建Shadowsocks服务端">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-weibo"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/&amp;title=解决screen断开后连不上的问题">
-                    <i class="fa fa-qq"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-star"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
+        <li class="pagination-number">第 1 页 共 1 页</li>
     </ul>
 </div>
 
-
-        
-        
-            
-        
-    </div>
-</article>
+</section>
 
 
 
@@ -392,152 +327,6 @@
 </footer>
 
             </div>
-            
-                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
-                    <div class="post-actions-wrap">
-    <nav>
-        <ul class="post-actions post-action-nav">
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/04/10/LNMP安装PHP-fileinfo扩展模块/"  data-tooltip="LNMP安装PHP fileinfo扩展模块">
-                
-                    <i class="fa fa-angle-left"></i>
-                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
-                </a>
-            </li>
-            <li class="post-action">
-                
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/11/CentOS7上搭建Shadowsocks服务端/" data-tooltip="CentOS上搭建Shadowsocks服务端">
-                
-                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
-                    <i class="fa fa-angle-right"></i>
-                </a>
-            </li>
-        </ul>
-    </nav>
-    <ul class="post-actions post-action-share">
-        <li class="post-action hide-lg hide-md hide-sm">
-            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
-                <i class="fa fa-share-alt"></i>
-            </a>
-        </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-facebook-official"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-twitter"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-google-plus"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-weibo"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/&amp;title=解决screen断开后连不上的问题">
-                    <i class="fa fa-qq"></i>
-                </a>
-            </li>
-        
-            
-            
-            <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-star"></i>
-                </a>
-            </li>
-        
-        
-        <li class="post-action">
-            
-                <a class="post-action-btn btn btn--default" href="#">
-            
-                <i class="fa fa-list"></i>
-            </a>
-        </li>
-    </ul>
-</div>
-
-
-                </div>
-                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
-    <i id="btn-close-shareoptions" class="fa fa-close"></i>
-    <ul class="share-options">
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-weibo"></i><span>分享到 Weibo</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/&amp;title=解决screen断开后连不上的问题">
-                    <i class="fa fa-qq"></i><span>分享到 QQ</span>
-                </a>
-            </li>
-        
-            
-            
-            <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/">
-                    <i class="fa fa-star"></i><span>分享到 Qzone</span>
-                </a>
-            </li>
-        
-    </ul>
-</div>
-
             
         </div>
         
@@ -786,8 +575,6 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
 <!--SCRIPTS END-->
-
-    
 
 
     </body>
