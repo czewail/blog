@@ -6,19 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Zewail&#39;s Blog">
-    <title>categories - Zewail&#39;s Blog</title>
+    <title>CentOS上搭建Shadowsocks服务端 - Zewail&#39;s Blog</title>
     <meta name="author" content="Zewail">
     
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+    <meta name="description" content="安装使用python版Shadowsocks安装 地址 123yum install python-setuptoolseasy_install pippip install shadowsocks 配置新建/etc/shadowsocks.json文件1vi /etc/shadowsocks.json 输入以下内容12345678910&amp;#123;    &quot;server&quot;:&quot;服务器IP&quot;,">
+<meta name="keywords" content="centos,shadowsocks">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="CentOS上搭建Shadowsocks服务端">
+<meta property="og:url" content="http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/index.html">
 <meta property="og:site_name" content="Zewail&#39;s Blog">
+<meta property="og:description" content="安装使用python版Shadowsocks安装 地址 123yum install python-setuptoolseasy_install pippip install shadowsocks 配置新建/etc/shadowsocks.json文件1vi /etc/shadowsocks.json 输入以下内容12345678910&amp;#123;    &quot;server&quot;:&quot;服务器IP&quot;,">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-10T12:56:15.000Z">
+<meta property="og:updated_time" content="2017-09-20T15:19:22.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="CentOS上搭建Shadowsocks服务端">
+<meta name="twitter:description" content="安装使用python版Shadowsocks安装 地址 123yum install python-setuptoolseasy_install pippip install shadowsocks 配置新建/etc/shadowsocks.json文件1vi /etc/shadowsocks.json 输入以下内容12345678910&amp;#123;    &quot;server&quot;:&quot;服务器IP&quot;,">
     
     
         
@@ -47,7 +51,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Zewail&#39;s Blog</a>
@@ -71,7 +75,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -231,7 +235,7 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
@@ -242,14 +246,14 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            categories
+            CentOS上搭建Shadowsocks服务端
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-09-10T20:55:06+08:00">
+    <time itemprop="datePublished" datetime="2017-01-11T19:44:33+08:00">
 	
-		    9月 10, 2017
+		    1月 11, 2017
     	
     </time>
     
@@ -260,11 +264,25 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            
+            <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>使用python版Shadowsocks安装 <a href="https://pypi.python.org/pypi/shadowsocks" target="_blank" rel="external">地址</a></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum install python-setuptools</div><div class="line">easy_install pip</div><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure>
+<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>新建<code>/etc/shadowsocks.json</code>文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/shadowsocks.json</div></pre></td></tr></table></figure></p>
+<p>输入以下内容<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"server"</span>:<span class="string">"服务器IP"</span>,</div><div class="line">    <span class="attr">"server_port"</span>:<span class="number">8388</span>,</div><div class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</div><div class="line">    <span class="attr">"local_port"</span>:<span class="number">1080</span>,</div><div class="line">    <span class="attr">"password"</span>:<span class="string">"密码"</span>,</div><div class="line">    <span class="attr">"timeout"</span>:<span class="number">300</span>,</div><div class="line">    <span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span>,</div><div class="line">    <span class="attr">"fast_open"</span>: <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
+<p>替换服务器IP和密码，也可以自定义端口</p>
+<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>前台运行(Ctrl+C或者关闭终端服务会自动停止)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json</div></pre></td></tr></table></figure></p>
+<p>后台运行(推荐，关闭终端后服务会继续运行)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json -d start</div><div class="line">ssserver -c /etc/shadowsocks.json -d stop</div></pre></td></tr></table></figure></p>
+
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/centos/">centos</a> <a class="tag tag--primary tag--small t-link" href="/tags/shadowsocks/">shadowsocks</a>
+
+            </div>
         
         
             <div class="post-actions-wrap">
@@ -272,7 +290,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/22/解决screen断开后连不上的问题/"  data-tooltip="解决screen断开后连不上的问题">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -280,7 +298,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/10/Centos7关闭防火墙并使用iptables/" data-tooltip="Centos7关闭防火墙并使用iptables">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -298,7 +316,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -306,7 +324,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -314,7 +332,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -333,6 +351,8 @@
 
         
         
+            
+        
     </div>
 </article>
 
@@ -345,6 +365,104 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/22/解决screen断开后连不上的问题/"  data-tooltip="解决screen断开后连不上的问题">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/10/Centos7关闭防火墙并使用iptables/" data-tooltip="Centos7关闭防火墙并使用iptables">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
             
         </div>
         
@@ -555,6 +673,8 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
     </body>

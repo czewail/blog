@@ -6,19 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Zewail&#39;s Blog">
-    <title>categories - Zewail&#39;s Blog</title>
+    <title>LNMP安装PHP fileinfo扩展模块 - Zewail&#39;s Blog</title>
     <meta name="author" content="Zewail">
     
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+    <meta name="description" content="第一步：找到lnmpa安装源位置12# 找到自己安装的php版本cd /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/ 第二步：查看phpize1/usr/local/php/bin/phpize 返回类似下面的信息：1234Configuring for:PHP Api Version:         20131106Zend Module Api No:">
+<meta name="keywords" content="php">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="LNMP安装PHP fileinfo扩展模块">
+<meta property="og:url" content="http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/index.html">
 <meta property="og:site_name" content="Zewail&#39;s Blog">
+<meta property="og:description" content="第一步：找到lnmpa安装源位置12# 找到自己安装的php版本cd /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/ 第二步：查看phpize1/usr/local/php/bin/phpize 返回类似下面的信息：1234Configuring for:PHP Api Version:         20131106Zend Module Api No:">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-10T12:56:15.000Z">
+<meta property="og:updated_time" content="2017-09-20T15:18:18.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="LNMP安装PHP fileinfo扩展模块">
+<meta name="twitter:description" content="第一步：找到lnmpa安装源位置12# 找到自己安装的php版本cd /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/ 第二步：查看phpize1/usr/local/php/bin/phpize 返回类似下面的信息：1234Configuring for:PHP Api Version:         20131106Zend Module Api No:">
     
     
         
@@ -47,7 +51,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Zewail&#39;s Blog</a>
@@ -71,7 +75,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -231,7 +235,7 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
@@ -242,16 +246,22 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            categories
+            LNMP安装PHP fileinfo扩展模块
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-09-10T20:55:06+08:00">
+    <time itemprop="datePublished" datetime="2017-04-10T22:31:47+08:00">
 	
-		    9月 10, 2017
+		    4月 10, 2017
     	
     </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/PHP/">PHP</a>
+
+
     
 </div>
 
@@ -260,11 +270,27 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            
+            <h4 id="第一步：找到lnmpa安装源位置"><a href="#第一步：找到lnmpa安装源位置" class="headerlink" title="第一步：找到lnmpa安装源位置"></a>第一步：找到lnmpa安装源位置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 找到自己安装的php版本</span></div><div class="line"><span class="built_in">cd</span> /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/</div></pre></td></tr></table></figure>
+<h4 id="第二步：查看phpize"><a href="#第二步：查看phpize" class="headerlink" title="第二步：查看phpize"></a>第二步：查看phpize</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/php/bin/phpize</div></pre></td></tr></table></figure>
+<p>返回类似下面的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Configuring <span class="keyword">for</span>:</div><div class="line">PHP Api Version:         20131106</div><div class="line">Zend Module Api No:      20131226</div><div class="line">Zend Extension Api No:   220131226</div></pre></td></tr></table></figure></p>
+<p>phpize是用来扩展php扩展模块的，通过phpize可以建立php的外挂模块，比如你想在原来编译好的php中加入memcached或者ImageMagick等扩展模块，可以使用phpize</p>
+<h4 id="第三步：编译模块"><a href="#第三步：编译模块" class="headerlink" title="第三步：编译模块"></a>第三步：编译模块</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./configure --with-php-config=/usr/<span class="built_in">local</span>/php/bin/php-config</div><div class="line">make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>返回类似下面信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Build complete.</div><div class="line">Don<span class="string">'t forget to run '</span>make <span class="built_in">test</span><span class="string">'.</span></div><div class="line"><span class="string">Installing shared extensions:     /usr/local/php/lib/php/extensions/nodebug-non-zts-20131226/</span></div></pre></td></tr></table></figure></p>
+<p>表明安装成功了。</p>
+<h4 id="第四步：修改php配置"><a href="#第四步：修改php配置" class="headerlink" title="第四步：修改php配置"></a>第四步：修改php配置</h4><p>/usr/local/php/etc/php.ini 添加扩展：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=fileinfo.so</div></pre></td></tr></table></figure></p>
+<p>如果安装的是nginx，则重启php-fpm进程：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/init.d/php-fpm restart</div></pre></td></tr></table></figure></p>
+
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/php/">php</a>
+
+            </div>
         
         
             <div class="post-actions-wrap">
@@ -272,7 +298,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/04/13/CSS-优先级机制/"  data-tooltip="CSS 优先级机制">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -280,7 +306,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/22/解决screen断开后连不上的问题/" data-tooltip="解决screen断开后连不上的问题">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -298,7 +324,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -306,7 +332,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -314,7 +340,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -333,6 +359,8 @@
 
         
         
+            
+        
     </div>
 </article>
 
@@ -345,6 +373,104 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/04/13/CSS-优先级机制/"  data-tooltip="CSS 优先级机制">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/22/解决screen断开后连不上的问题/" data-tooltip="解决screen断开后连不上的问题">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
+                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
+                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
+                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
             
         </div>
         
@@ -555,6 +681,8 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
     </body>

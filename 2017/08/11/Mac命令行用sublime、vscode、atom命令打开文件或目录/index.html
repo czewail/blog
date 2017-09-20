@@ -6,19 +6,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Zewail&#39;s Blog">
-    <title>categories - Zewail&#39;s Blog</title>
+    <title>Mac命令行用sublime、vscode、atom命令打开文件或目录 - Zewail&#39;s Blog</title>
     <meta name="author" content="Zewail">
     
     
     
-    <meta property="og:type" content="blog">
-<meta property="og:title" content="categories">
-<meta property="og:url" content="http://yoursite.com/categories/index.html">
+    <meta name="description" content="普通版：建立软连接123ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublimeln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/local/bin/atomln -s /Applications/Visual\">
+<meta name="keywords" content="mac,sublime">
+<meta property="og:type" content="blog">
+<meta property="og:title" content="Mac命令行用sublime、vscode、atom命令打开文件或目录">
+<meta property="og:url" content="http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/index.html">
 <meta property="og:site_name" content="Zewail&#39;s Blog">
+<meta property="og:description" content="普通版：建立软连接123ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublimeln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/local/bin/atomln -s /Applications/Visual\">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-10T12:56:15.000Z">
+<meta property="og:updated_time" content="2017-09-20T15:18:10.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="categories">
+<meta name="twitter:title" content="Mac命令行用sublime、vscode、atom命令打开文件或目录">
+<meta name="twitter:description" content="普通版：建立软连接123ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/local/bin/sublimeln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/local/bin/atomln -s /Applications/Visual\">
     
     
         
@@ -47,7 +51,7 @@
         
     
 
-<header id="header" data-behavior="1">
+<header id="header" data-behavior="4">
     <i id="btn-open-sidebar" class="fa fa-lg fa-bars"></i>
     <div class="header-title">
         <a class="header-title-link" href="/ ">Zewail&#39;s Blog</a>
@@ -71,7 +75,7 @@
         
     
 
-<nav id="sidebar" data-behavior="1">
+<nav id="sidebar" data-behavior="4">
     <div class="sidebar-container">
         
             <div class="sidebar-profile">
@@ -231,7 +235,7 @@
 </nav>
 
             
-            <div id="main" data-behavior="1"
+            <div id="main" data-behavior="4"
                  class="
                         hasCoverMetaIn
                         ">
@@ -242,16 +246,22 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            categories
+            Mac命令行用sublime、vscode、atom命令打开文件或目录
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-09-10T20:55:06+08:00">
+    <time itemprop="datePublished" datetime="2017-08-11T01:04:21+08:00">
 	
-		    9月 10, 2017
+		    8月 11, 2017
     	
     </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Mac/">Mac</a>
+
+
     
 </div>
 
@@ -260,11 +270,24 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            
+            <h3 id="普通版：建立软连接"><a href="#普通版：建立软连接" class="headerlink" title="普通版：建立软连接"></a>普通版：建立软连接</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">ln -s /Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl /usr/<span class="built_in">local</span>/bin/sublime</div><div class="line">ln -s /Applications/Atom.app/Contents/MacOS/Atom /usr/<span class="built_in">local</span>/bin/atom</div><div class="line">ln -s /Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code /usr/<span class="built_in">local</span>/bin/vscode</div></pre></td></tr></table></figure>
+<h3 id="zsh版：alias"><a href="#zsh版：alias" class="headerlink" title="zsh版：alias"></a>zsh版：alias</h3><p>编辑<code>.zsh</code>配置文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi ~/.zshrc</div></pre></td></tr></table></figure></p>
+<p>添加<code>alias</code>别名<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">alias sublime=&apos;/Applications/Sublime\ Text.app/Contents/SharedSupport/bin/subl&apos;</div><div class="line">alias atom=&apos;/Applications/Atom.app/Contents/MacOS/Atom&apos;</div><div class="line">alias vscode=&apos;/Applications/Visual\ Studio\ Code.app/Contents/Resources/app/bin/code&apos;</div></pre></td></tr></table></figure></p>
+<h3 id="使用"><a href="#使用" class="headerlink" title="使用"></a>使用</h3><p>打开文件</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sublime example.js</div><div class="line">atom example.js</div><div class="line">vscode example.js</div></pre></td></tr></table></figure>
+<p>打开当前目录<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">sublime .</div><div class="line">atom .</div><div class="line">vscode .</div></pre></td></tr></table></figure></p>
+
             
         </div>
     </div>
     <div id="post-footer" class="post-footer main-content-wrap">
+        
+            <div class="post-footer-tags">
+                <span class="text-color-light text-small">标签</span><br/>
+                
+    <a class="tag tag--primary tag--small t-link" href="/tags/mac/">mac</a> <a class="tag tag--primary tag--small t-link" href="/tags/sublime/">sublime</a>
+
+            </div>
         
         
             <div class="post-actions-wrap">
@@ -280,7 +303,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--disabled">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/05/20/CSS3动画初识/" data-tooltip="CSS3动画初识">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -298,7 +321,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -306,7 +329,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -314,7 +337,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/categories/index.html">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -333,6 +356,8 @@
 
         
         
+            
+        
     </div>
 </article>
 
@@ -345,6 +370,104 @@
 </footer>
 
             </div>
+            
+                <div id="bottom-bar" class="post-bottom-bar" data-behavior="4">
+                    <div class="post-actions-wrap">
+    <nav>
+        <ul class="post-actions post-action-nav">
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--disabled">
+                
+                    <i class="fa fa-angle-left"></i>
+                    <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
+                </a>
+            </li>
+            <li class="post-action">
+                
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/05/20/CSS3动画初识/" data-tooltip="CSS3动画初识">
+                
+                    <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
+                    <i class="fa fa-angle-right"></i>
+                </a>
+            </li>
+        </ul>
+    </nav>
+    <ul class="post-actions post-action-share">
+        <li class="post-action hide-lg hide-md hide-sm">
+            <a class="post-action-btn btn btn--default btn-open-shareoptions"  href="#btn-open-shareoptions">
+                <i class="fa fa-share-alt"></i>
+            </a>
+        </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
+                    <i class="fa fa-facebook-official"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
+                    <i class="fa fa-twitter"></i>
+                </a>
+            </li>
+        
+            
+            
+            <li class="post-action hide-xs">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
+                    <i class="fa fa-google-plus"></i>
+                </a>
+            </li>
+        
+        
+        <li class="post-action">
+            
+                <a class="post-action-btn btn btn--default" href="#">
+            
+                <i class="fa fa-list"></i>
+            </a>
+        </li>
+    </ul>
+</div>
+
+
+                </div>
+                <div id="share-options-bar" class="share-options-bar" data-behavior="4">
+    <i id="btn-close-shareoptions" class="fa fa-close"></i>
+    <ul class="share-options">
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
+                    <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
+                    <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
+                </a>
+            </li>
+        
+            
+            
+            <li class="share-option">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://yoursite.com/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
+                    <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
+                </a>
+            </li>
+        
+    </ul>
+</div>
+
             
         </div>
         
@@ -555,6 +678,8 @@
         <!--SCRIPTS-->
 <script src="/assets/js/script-ivwiy10zeb8fifc4swnhkwneuk64y53w2scmdmtp8thi9cqfxh31aowtroaz.min.js"></script>
 <!--SCRIPTS END-->
+
+    
 
 
     </body>
