@@ -245,6 +245,180 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2017/08/12/基本数据类型的一些概念/">
+                            基本数据类型的一些概念
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-08-12T00:07:30+08:00">
+	
+		    8月 12, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Javascript/">Javascript</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h1 id="table-of-contents">目录</h1><ol class="toc"><li class="toc-item toc-level-2"><a class="toc-link" href="#基本"><span class="toc-text">基本</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#字符类型"><span class="toc-text">字符类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数组类型"><span class="toc-text">数组类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的定义"><span class="toc-text">数组的定义</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#数组的length属性"><span class="toc-text">数组的length属性</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#数字类型"><span class="toc-text">数字类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#布尔类型"><span class="toc-text">布尔类型</span></a></li><li class="toc-item toc-level-2"><a class="toc-link" href="#对象类型"><span class="toc-text">对象类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建方式"><span class="toc-text">创建方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数调用"><span class="toc-text">函数调用</span></a></li></ol></li></ol></li><li class="toc-item toc-level-2"><a class="toc-link" href="#函数类型"><span class="toc-text">函数类型</span></a><ol class="toc-child"><li class="toc-item toc-level-4"><a class="toc-link" href="#创建方式-1"><span class="toc-text">创建方式</span></a></li><li class="toc-item toc-level-4"><a class="toc-link" href="#函数声明与函数表达式"><span class="toc-text">函数声明与函数表达式</span></a></li></ol></li></ol></li></ol>
+<h2 id="基本"><a href="#基本" class="headerlink" title="基本"></a>基本</h2><p>通过typeof来检测，得到的数据类型有 string、number、boolean、null、undefined、Object(所有数据的基础)；</p>
+<p>ECMAScript中有5种简单的数据类型，也称为基本数据类型；Undefined、Null、Boolean、Number、String, 一种复杂的数据类型，Object(typeof检测还有一种特殊的Function)；</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> unVar); <span class="comment">// undefined，这个变量没有定义,但是不会报错；unVar此时是变量；</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> (<span class="number">123</span>)); <span class="comment">// number，是一个数字； typeof是操作符而不是方法，所以后面可以加()也可以不加；</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="string">"123"</span>); <span class="comment">// string，是一个字符串</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">false</span>); <span class="comment">// boolean，是一个布尔值</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> &#123;&#125;);    <span class="comment">// object 是一个对象</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="literal">null</span>);  <span class="comment">// object 是一个对象，在javascript里，null是一个空指针；</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> <span class="function"><span class="keyword">function</span>(<span class="params"></span>)</span>&#123;&#125;); <span class="comment">// function，是一个方法，也是属于object类型的；</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="字符类型"><a href="#字符类型" class="headerlink" title="字符类型"></a>字符类型</h2><p>为了便于操作基本类型值，ECMAScript 提供了 3 个特殊的引用类型： Boolean 、 Number 和String (注意前面的是大写的，String不是string)。这些类型与引用类型相似，但同时也具有与各自的基本类型相应的特殊行为。实际上，每当读取一个基本类型值的时候，后台就会创建一个对应的基本包装类型的对象，从而让我们能够调用一些方法来操作这些数据。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tmpString = <span class="string">'Hello'</span></div><div class="line">tmpString2 = tmpString.indexOf(<span class="string">'e'</span>)</div><div class="line"><span class="built_in">console</span>.log(tmpString, tmpString2)</div><div class="line"></div><div class="line"><span class="comment">// 输出</span></div><div class="line"><span class="comment">// Hello 1</span></div></pre></td></tr></table></figure>
+<p>其实，为了让我们实现这种直观的操作，后台已经自动完成了一系列的处理；第一行的完整写法是<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tmpString = <span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'Hello'</span>)</div></pre></td></tr></table></figure></p>
+<p>该代码生成了一个String示例，打印该实例<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.dir(<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">'Hello'</span>));</div></pre></td></tr></table></figure></p>
+<p><img src="/assets/javascript/string1.png" alt="String1"></p>
+<p>可以看到该示例每一位的值以及长度，默认值为’Hello’，该实例的原型（<strong>proto</strong>）为<code>String</code>类，字符串类型(string)是字符串类(String)的一员，继承字符串类的所有属性</p>
+<p>继续查看该实例的原型<code>String</code>类，看看继承了该类的哪些方法</p>
+<p><img src="/assets/javascript/string2.png" alt="String2"></p>
+<p>我们可以看到<code>String</code>类的<code>__proto__</code>指向了<code>Object</code>这个基类，之所以说是基类，是因为<code>Object.__proto__</code>是null，已经到顶了</p>
+<p>举个栗子🌰:</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.dir((<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Hello"</span>)).__proto__); <span class="comment">// 输出String类</span></div><div class="line"><span class="built_in">console</span>.dir((<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Hello"</span>)).__proto__.__proto__); <span class="comment">// 输出Object类</span></div><div class="line"><span class="built_in">console</span>.dir((<span class="keyword">new</span> <span class="built_in">String</span>(<span class="string">"Hello"</span>)).__proto__.__proto__.__proto__); <span class="comment">// 输出null</span></div></pre></td></tr></table></figure>
+<p>再举个栗子🌰：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> tmpString = <span class="string">'Hello'</span></div><div class="line"><span class="built_in">console</span>.log(tmpString.indexOf(<span class="string">'e'</span>) <span class="comment">// 输出 1</span></div><div class="line"><span class="built_in">console</span>.log(tmpString.__proto__.indexOf(<span class="string">'e'</span>)） <span class="comment">// 输出 -1， 因为String类的默认值为“”</span></div><div class="line"><span class="built_in">console</span>.log(tmpString.__proto__.__proto__.indexOf(<span class="string">'e'</span>)） <span class="comment">// 报错，因为没有indexOf这个方法</span></div></pre></td></tr></table></figure></p>
+<blockquote>
+<p>引用类型与基本包装类型的主要区别就是对象的生存期。使用 new 操作符创建的引用类型的实例，在执行流离开当前作用域之前都一直保存在内存中。而自动创建的基本包装类型的对象，则只存在于一行代码的执行瞬间，然后立即被销毁。这意味着我们不能在运行时为基本类型值添加属性和方法</p>
+</blockquote>
+<p>Object 构造函数也会像工厂方法一样，根据传入值的类型返回相应基本包装类型的实例。把字符串传给 Object 构造函数，就会创建 String 的实例；而传入数值参数会得到 Number 的实例，传入布尔值参数就会得到 Boolean 的实例。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="string">"hello"</span>);</div><div class="line"><span class="built_in">console</span>.log(obj <span class="keyword">instanceof</span> <span class="built_in">String</span>); <span class="comment">//true</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="number">123</span>);</div><div class="line"><span class="built_in">console</span>.log(obj <span class="keyword">instanceof</span> <span class="built_in">Number</span>); <span class="comment">//true</span></div><div class="line"></div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">Object</span>(<span class="literal">false</span>);</div><div class="line"><span class="built_in">console</span>.log(obj <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>); <span class="comment">//true</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>要注意的是，使用 new 调用基本包装类型的构造函数，与直接调用同名的转型函数是不一样的。</p>
+</blockquote>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> value = <span class="number">123</span>;</div><div class="line"><span class="keyword">var</span> string = <span class="built_in">String</span>(value); <span class="comment">// 转型函数</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> string); <span class="comment">// "string"</span></div><div class="line"><span class="keyword">var</span> obj = <span class="keyword">new</span> <span class="built_in">String</span>(value); <span class="comment">// 构造函数</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> obj); <span class="comment">// "object"</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="数组类型"><a href="#数组类型" class="headerlink" title="数组类型"></a>数组类型</h2><p>ECMAScript 数组的每一项可以保存任何类型的数据。也就是说，可以用数组的第一个位置来保存字符串，用第二位置来保存数值，用第三个位置来保存对象，以此类推。而且，CMAScript 数组的大小是可以动态调整的，即可以随着数据的添加自动增长以容纳新增数据。</p>
+<h4 id="数组的定义"><a href="#数组的定义" class="headerlink" title="数组的定义"></a>数组的定义</h4><ul>
+<li><p>构造函数模式</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>); <span class="comment">// 创建一个包含 3 项，即字符串red", "blue", "green"的数组</span></div><div class="line"><span class="keyword">var</span> colors = <span class="keyword">new</span> <span class="built_in">Array</span>(<span class="number">3</span>); <span class="comment">// 创建一个包含 3 项的数组，实际项目中，很少有人这么写；</span></div><div class="line"><span class="keyword">var</span> colors = <span class="built_in">Array</span>(<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>); <span class="comment">// 构造函数的new是可以省略的；</span></div></pre></td></tr></table></figure>
+</li>
+<li><p>数组籽棉量表示法</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>]; <span class="comment">// 创建一个包含 3 个字符串的数组</span></div><div class="line"><span class="keyword">var</span> names = []; <span class="comment">// 创建一个空数组</span></div><div class="line"><span class="keyword">var</span> values = [<span class="number">1</span>,<span class="number">2</span>,]; <span class="comment">// 创建一个包含 2 或 3 项的数组</span></div><div class="line"><span class="keyword">var</span> options = [,,,,,]; <span class="comment">// 创建一个包含 5 或 6 个空位的数组</span></div></pre></td></tr></table></figure>
+</li>
+</ul>
+<p>在 IE 中， values 会成为一个包含 3 个项且每项的值分别为 1、2 和 undefined 的数组；在其他浏览器中， values 会成为一个包含 2项且值分别为1 和 2 的数组。原因是 IE8 及之前版本中的 ECMAScript 实现在数组字面量方面存在 bug。由于这个 bug导致的另一种情况如最后一行代码所示，该行代码可能会创建包含 5 项的数组（在 IE9+、Firefox、Opera、Safari 和 Chrome 中），也可能会创建包含 6 项的数组（在 IE8 及更早版本中）。在像这种省略值的情况下，每一项都将获得 undefined 值；这个结果与调用 Array 构造函数时传递项数在逻辑上是相同的。但是由于 IE 的实现与其他浏览器不一致，因此强烈建议不要使用这种语法。</p>
+<p>在读取和设置数组的值时，要使用方括号并提供相应值的基于 0 的数字索引</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>]; <span class="comment">// 定义一个字符串数组</span></div><div class="line"><span class="built_in">console</span>.log(colors[<span class="number">0</span>]); <span class="comment">// 显示第一项</span></div><div class="line">colors[<span class="number">2</span>] = <span class="string">"black"</span>; <span class="comment">// 修改第三项</span></div><div class="line">colors[<span class="number">3</span>] = <span class="string">"brown"</span>; <span class="comment">// 新增第四项,如果设置某个值的索引超过了数组现有项数,数组就会自动增加到该索引值加 1 的长度（就这个例子而言，索引是 3，因此数组长度就是 4）</span></div></pre></td></tr></table></figure>
+<h4 id="数组的length属性"><a href="#数组的length属性" class="headerlink" title="数组的length属性"></a>数组的length属性</h4><p>数组的项数保存在其 length 属性中，这个属性始终会返回 0 或更大的值</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>]; <span class="comment">// 创建一个包含 3 个字符串的数组</span></div><div class="line"><span class="keyword">var</span> names = []; <span class="comment">// 创建一个空数组</span></div><div class="line"><span class="built_in">console</span>.log(colors.length); <span class="comment">// 3</span></div><div class="line"><span class="built_in">console</span>.log(names.length); <span class="comment">// 0</span></div></pre></td></tr></table></figure>
+<p>数组的length不是只读的, 通过设置这个属性，可以从数组的末尾移除项或向数组中添加新项。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>];  <span class="comment">// 创建一个包含 3 个字符串的数组</span></div><div class="line">colors.length = <span class="number">2</span>;</div><div class="line"><span class="built_in">console</span>.log(colors[<span class="number">2</span>]); <span class="comment">//undefined，此时的colors数组已经被改变了；数组 colors 一开始有 3 个值。将其 length 属性设置为 2 会移除最后一项</span></div><div class="line">colors.length = <span class="number">10</span>;</div><div class="line"><span class="built_in">console</span>.log(colors[<span class="number">9</span>]); <span class="comment">//undefined,虽然 colors 数组包含 2 个项，但把它的 length 属性设置成了 10。这个数组不存在位置 9，所以访问这个位置的值就得到了特殊值 undefined 。</span></div></pre></td></tr></table></figure>
+<p>利用 length 属性也可以方便地在数组末尾添加新项, 由于数组最后一项的索引始终是 length-1 ，因此下一个新项的位置就是 length 。每当在数组末尾添加一项后，其 length 属性都会自动更新以反应这一变化。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> colors = [<span class="string">"red"</span>, <span class="string">"blue"</span>, <span class="string">"green"</span>]; <span class="comment">// 创建一个包含 3 个字符串的数组</span></div><div class="line">colors[colors.length] = <span class="string">"black"</span>; <span class="comment">// （在位置 3 ）添加一种颜色</span></div><div class="line">colors[colors.length] = <span class="string">"brown"</span>; <span class="comment">// （在位置 4 )再添加一种颜色</span></div></pre></td></tr></table></figure>
+<h2 id="数字类型"><a href="#数字类型" class="headerlink" title="数字类型"></a>数字类型</h2><p>先举个栗子🌰：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Number</span>())</div></pre></td></tr></table></figure></p>
+<p><img src="/assets/javascript/number1.png" alt="number1"></p>
+<p>可以看到 Number 类型重写了 valueOf() 、 toLocaleString() 和 toString()方法，重写后的 valueOf() 方法返回对象表示的基本类型的数值，另外两个方法则返回字符串形式的数值</p>
+<blockquote>
+<p>为 toString() 方法传递一个表示基数的参数，告诉它返回几进制数值的字符串形式</p>
+</blockquote>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> num = <span class="number">10</span>;</div><div class="line"><span class="built_in">console</span>.log(num.toString()); <span class="comment">// "10"</span></div><div class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">2</span>)); <span class="comment">// "1010"</span></div><div class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">8</span>)); <span class="comment">// "12"</span></div><div class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">10</span>)); <span class="comment">// "10"</span></div><div class="line"><span class="built_in">console</span>.log(num.toString(<span class="number">16</span>)); <span class="comment">// "a"</span></div></pre></td></tr></table></figure>
+<p>再看一个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> numberObject = <span class="keyword">new</span> <span class="built_in">Number</span>(<span class="number">10</span>);</div><div class="line"><span class="keyword">var</span> numberValue = <span class="number">10</span>;</div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> numberObject); <span class="comment">// "object"</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> numberValue); <span class="comment">// "number"</span></div><div class="line"><span class="built_in">console</span>.log(numberObject <span class="keyword">instanceof</span> <span class="built_in">Number</span>); <span class="comment">// true</span></div><div class="line"><span class="built_in">console</span>.log(numberValue <span class="keyword">instanceof</span> <span class="built_in">Number</span>); <span class="comment">// false</span></div></pre></td></tr></table></figure>
+<p>在使用 typeof 操作符测试基本类型数值时，始终会返回 “number” ，而在测试 Number 对象时，则会返回 “object” 。类似地， Number 对象是 Number 类型的实例，而基本类型的数值则不是。所以不建议直接实例化 Number 类型。</p>
+<p>Number()：</p>
+<ul>
+<li>Boolean转换为数值的时候<ul>
+<li>true转为1</li>
+<li>flase转为0</li>
+</ul>
+</li>
+<li>null转换为数值的时候 转换为0</li>
+<li>undefined转换为数值的时候 转为NaN</li>
+<li>string转换为数值的时候<ul>
+<li>如果只包含数字，转为十进制数，前导0被忽略</li>
+<li>如果包含有效浮点格式，转为浮点数值，前导0被忽略</li>
+<li>包含有效十六进制格式，转为相同大小的十六进制整数</li>
+<li>空字符串转为0</li>
+<li>其他格式字符串 转为NaN</li>
+</ul>
+</li>
+<li>Object 调用对象的valueOf()方法，然后依照前面的规则转换返回的值，如果转换的结果是NAN，则调用对应的toString方法，然后再次依照前面的规则转换返回的字符串值</li>
+</ul>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="string">"hello"</span>)); <span class="comment">// NaN</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="string">""</span>)); <span class="comment">// 0</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="string">"000011"</span>)); <span class="comment">// 1</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="string">"true"</span>)); <span class="comment">// NaN</span></div><div class="line"><span class="built_in">console</span>.log(<span class="built_in">Number</span>(<span class="literal">true</span>)); <span class="comment">// 1</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="布尔类型"><a href="#布尔类型" class="headerlink" title="布尔类型"></a>布尔类型</h2><p>先看一个栗子🌰：<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(<span class="keyword">new</span> <span class="built_in">Boolean</span>())</div></pre></td></tr></table></figure></p>
+<p><img src="/assets/javascript/bool1.png" alt="bool1"></p>
+<p>可以看到只有2个方法， <code>toString()</code>和<code>valueOf()</code>并且都是重写Object的方法</p>
+<p>boolean数据就是用来判断真假的，而Boolean对象是做为对象来用的，任何非空对象转换的时候，都是true；</p>
+<blockquote>
+<p><code>new Boolean(false)</code> 这种方法创建的Boolean是true的</p>
+</blockquote>
+<p>看栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> falseObject = <span class="keyword">new</span> <span class="built_in">Boolean</span>(<span class="literal">false</span>);</div><div class="line"><span class="keyword">var</span> result = falseObject &amp;&amp; <span class="literal">true</span>;</div><div class="line"><span class="built_in">console</span>.log(falseObject,result); <span class="comment">//true,因为falseObject会被转为true；因为是当作对象来解析的；</span></div><div class="line"><span class="keyword">var</span> falseValue = <span class="literal">false</span>;</div><div class="line">result = falseValue &amp;&amp; <span class="literal">true</span>;</div><div class="line"><span class="built_in">console</span>.log(falseValue,result); <span class="comment">//false</span></div><div class="line"></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> falseObject); <span class="comment">//object</span></div><div class="line"><span class="built_in">console</span>.log(<span class="keyword">typeof</span> falseValue); <span class="comment">//boolean</span></div><div class="line"><span class="built_in">console</span>.log(falseObject <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>); <span class="comment">//true</span></div><div class="line"><span class="built_in">console</span>.log(falseValue <span class="keyword">instanceof</span> <span class="built_in">Boolean</span>); <span class="comment">//false</span></div></pre></td></tr></table></figure>
+<hr>
+<h2 id="对象类型"><a href="#对象类型" class="headerlink" title="对象类型"></a>对象类型</h2><h4 id="创建方式"><a href="#创建方式" class="headerlink" title="创建方式"></a>创建方式</h4><p><em>构造函数模式</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = <span class="keyword">new</span> <span class="built_in">Object</span>();</div><div class="line">person.name = <span class="string">"zewail"</span>;</div><div class="line">person.age = <span class="string">"26"</span>;</div></pre></td></tr></table></figure>
+<p><em>字面量方式</em></p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> person = &#123;</div><div class="line">  name : <span class="string">"zewail"</span>,</div><div class="line">  age : <span class="string">"26"</span></div><div class="line">&#125;;</div></pre></td></tr></table></figure>
+<h4 id="函数调用"><a href="#函数调用" class="headerlink" title="函数调用"></a>函数调用</h4><ul>
+<li>点表示法</li>
+<li>方括号表示法</li>
+</ul>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(person[<span class="string">"name"</span>]); <span class="comment">// "zewail"</span></div><div class="line"><span class="built_in">console</span>.log(person.name);    <span class="comment">// "zewail"</span></div><div class="line"><span class="keyword">var</span> propertyName = <span class="string">"name"</span>;</div><div class="line"><span class="built_in">console</span>.log(person[propertyName]); <span class="comment">// "zewail"</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>除非必须使用变量来访问属性，否则我们建议使用点表示法</p>
+</blockquote>
+<h2 id="函数类型"><a href="#函数类型" class="headerlink" title="函数类型"></a>函数类型</h2><blockquote>
+<p>函数也是对象，函数名也是变量</p>
+</blockquote>
+<p>每个函数都是 Function 类型的实例，而且都与其他引用类型一样具有属性和方法。由于函数是对象，因此函数名实际上也是一个指向函数对象的指针，不会与某个函数绑定。</p>
+<h4 id="创建方式-1"><a href="#创建方式-1" class="headerlink" title="创建方式"></a>创建方式</h4><figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div></pre></td><td class="code"><pre><div class="line"><span class="comment">//function语句的定义方法</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">func</span>(<span class="params">arg1,arg2</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"function语句的定义方法:"</span>, arg1 + arg2);</div><div class="line">	<span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"></div><div class="line"><span class="comment">//函数直接量的定义方法</span></div><div class="line"><span class="keyword">var</span> func = <span class="function"><span class="keyword">function</span>(<span class="params">arg1, arg2</span>)</span>&#123;</div><div class="line">	<span class="built_in">console</span>.log(<span class="string">"函数直接量的定义方法:"</span>, arg1 + arg2);</div><div class="line">	<span class="keyword">return</span>;</div><div class="line">&#125;</div><div class="line"><span class="comment">//构造函数的定义方法</span></div><div class="line"><span class="comment">// Function 构造函数可以接收任意数量的参数，但最后一个参数始终都被看成是函数体，而前面的参数则枚举出了新函数的参数。</span></div><div class="line"><span class="keyword">var</span> func = <span class="keyword">new</span> <span class="built_in">Function</span>(<span class="string">"arg1"</span>, <span class="string">"arg2"</span>, <span class="string">"console.log('构造函数的定义方法:', arg1 + arg2)"</span>); <span class="comment">//不推荐, 因为这种语法会导致解析两次代码（第一次是解析常规 ECMAScript代码，第二次是解析传入构造函数中的字符串），从而影响性能。</span></div></pre></td></tr></table></figure>
+<p><em>函数名仅仅是指向函数的指针，因此函数名与包含对象指针的其他变量没有什么不同</em></p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">// 20</span></div><div class="line"><span class="keyword">var</span> anotherSum = sum;</div><div class="line"><span class="built_in">console</span>.log(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">// 20</span></div><div class="line">sum = <span class="literal">null</span>;</div><div class="line"><span class="built_in">console</span>.log(anotherSum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">// 20</span></div></pre></td></tr></table></figure>
+<p>以上代码首先定义了一个名为 sum() 的函数，用于求两个值的和。然后，又声明了变量 anotherSum ，并将其设置为与 sum 相等（将 sum 的值赋给 anotherSum ）。注意，使用不带圆括号的函数名是访问函数指针，而非调用函数。此时， anotherSum 和 sum 就都指向了同一个函数，因此 anotherSum() 也可以被调用并返回结果。即使将 sum 设置为 null ，让它与函数“断绝关系”，但仍然可以正常调用anotherSum() 。</p>
+<h4 id="函数声明与函数表达式"><a href="#函数声明与函数表达式" class="headerlink" title="函数声明与函数表达式"></a>函数声明与函数表达式</h4><p>函数声明和函数表达式在调用的时候就会牵扯到预解释的概念；解析器会率先读取函数声明，并使其在执行任何代码之前可用（可以访问）；至于函数表达式，则必须等到解析器执行到它所在的代码行，才会真正被解释执行。</p>
+<p>举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">//20</span></div><div class="line"><span class="function"><span class="keyword">function</span> <span class="title">sum</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>在代码开始执行之前，解析器就已经开始预解释了，先找到var和function关键字的，预先声明，var 声明的变量声明后默认的值是undefined，function在声明的时候，会把这个函数保存为一个字符串；此时函数声明的那个变量所储存的是这个字符串的引用地址，预解释后，无论在哪里都可以调用这个函数；</p>
+<p>再举个栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">// Uncaught TypeError: sum is not a function</span></div><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span>(<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>由于sum声明后默认的值是<code>undefined</code>, 在赋值成为函数之前，用函数的方式调用就会报错误, 只能写在函数表达式的后面</p>
+<p>栗子🌰：</p>
+<figure class="highlight javascript"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line"><span class="keyword">var</span> sum = <span class="function"><span class="keyword">function</span> (<span class="params">num1, num2</span>)</span>&#123;</div><div class="line">  <span class="keyword">return</span> num1 + num2;</div><div class="line">&#125;</div><div class="line"><span class="built_in">console</span>.log(sum(<span class="number">10</span>,<span class="number">10</span>)); <span class="comment">// 20</span></div></pre></td></tr></table></figure>
+<blockquote>
+<p>除了什么时候可以通过变量访问函数这一点区别之外，函数声明与函数表达式的语法其实是等价的。</p>
+</blockquote>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2017/08/12/基本数据类型的一些概念/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/">
                             Mac命令行用sublime、vscode、atom命令打开文件或目录
                         </a>
@@ -612,7 +786,7 @@
             
                 <div class="postShorten-content" itemprop="articleBody">
                     <h1 id="CSS优先级机制"><a href="#CSS优先级机制" class="headerlink" title="CSS优先级机制"></a>CSS优先级机制</h1><h3 id="样式优先级"><a href="#样式优先级" class="headerlink" title="样式优先级"></a>样式优先级</h3><p>外部样式、内部样式和内联样式同时应用于同一个元素，就是使多重样式的情况<br>一般情况下<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">（外部样式）External style sheet &lt;（内部样式）Internal style sheet &lt;（内联样式）Inline style</div></pre></td></tr></table></figure></p>
-<p>注意，有一个例外的情况，当外部样式放在内部样式的后面，则外部样式将覆盖内部样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="undefined">      /* 内部样式 */</span></div><div class="line"><span class="undefined">      h1&#123; color:red; &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 外部样式 style.css --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">      style.css内容：</span></div><div class="line"><span class="comment">      h1 &#123; color: green; &#125;</span></div><div class="line"><span class="comment">    --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
+<p>注意，有一个例外的情况，当外部样式放在内部样式的后面，则外部样式将覆盖内部样式<br><figure class="highlight html"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"><span class="tag">&lt;<span class="name">html</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">head</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">style</span> <span class="attr">type</span>=<span class="string">"text/css"</span>&gt;</span><span class="undefined"></span></div><div class="line"><span class="css">      <span class="comment">/* 内部样式 */</span></span></div><div class="line"><span class="css">      <span class="selector-tag">h1</span>&#123; <span class="attribute">color</span>:red; &#125;</span></div><div class="line"><span class="undefined">    </span><span class="tag">&lt;/<span class="name">style</span>&gt;</span></div><div class="line">    <span class="comment">&lt;!-- 外部样式 style.css --&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">link</span> <span class="attr">rel</span>=<span class="string">"stylesheet"</span> <span class="attr">type</span>=<span class="string">"text/css"</span> <span class="attr">href</span>=<span class="string">"style.css"</span>/&gt;</span></div><div class="line">    <span class="comment">&lt;!--</span></div><div class="line"><span class="comment">      style.css内容：</span></div><div class="line"><span class="comment">      h1 &#123; color: green; &#125;</span></div><div class="line"><span class="comment">    --&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">head</span>&gt;</span></div><div class="line"><span class="tag">&lt;<span class="name">body</span>&gt;</span></div><div class="line">    <span class="tag">&lt;<span class="name">h1</span>&gt;</span>标题<span class="tag">&lt;/<span class="name">h1</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">body</span>&gt;</span></div><div class="line"><span class="tag">&lt;/<span class="name">html</span>&gt;</span></div></pre></td></tr></table></figure></p>
 <h3 id="CSS优先级法则"><a href="#CSS优先级法则" class="headerlink" title="CSS优先级法则"></a>CSS优先级法则</h3><h4 id="不同级别"><a href="#不同级别" class="headerlink" title="不同级别"></a>不同级别</h4><ol>
 <li>!important的样式会覆盖页面内任何位置定义的样式</li>
 <li>作为style属性写在元素内的样式</li>
@@ -1106,6 +1280,25 @@
                     <hr>
                 </div>
                 
+                <div class="media">
+                    
+                    <div class="media-body">
+                        <a class="link-unstyled" href="http://www.zewail.me/2017/08/12/基本数据类型的一些概念/">
+                            <h3 class="media-heading">基本数据类型的一些概念</h3>
+                        </a>
+                        <span class="media-meta">
+                            <span class="media-date text-small">
+                                
+                                    2017年8月12日
+                                
+                            </span>
+                        </span>
+                        <div class="media-content hide-xs font-merryweather"></div>
+                    </div>
+                    <div style="clear:both;"></div>
+                    <hr>
+                </div>
+                
             </div>
         </div>
         <div class="modal-footer">
@@ -1113,7 +1306,7 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 9 篇文章
+                找到 10 篇文章
             </p>
         </div>
     </div>
