@@ -245,6 +245,62 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2017/09/23/React中使用ref作为回调方法/">
+                            React中使用ref作为回调方法
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-09-23T18:47:06+08:00">
+	
+		    9月 23, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Javascript/">Javascript</a>, <a class="category-link" href="/categories/Javascript/React/">React</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <p>React提供的这个ref属性，表示为对组件真正实例的引用</p>
+<p>ref属性可以设置为一个回调函数，这也是官方强烈推荐的用法</p>
+<p>这个函数执行的时机:</p>
+<ul>
+<li><strong>组件被挂载后</strong>，回调函数被立即执行，回调函数的参数为该组件的具体实例</li>
+<li><strong>组件被卸载或者原有的ref属性本身发生变化时</strong>，回调也会被立即执行，此时回调函数参数为<code>null</code></li>
+</ul>
+<figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line">	<span class="keyword">constructor</span>() &#123;</div><div class="line">		<span class="keyword">super</span>()</div><div class="line">		<span class="keyword">this</span>.state = &#123;</div><div class="line">			name: <span class="string">'按钮1'</span></div><div class="line">		&#125;</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	buttonRef = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line">		<span class="built_in">console</span>.log(e)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	changeName = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line">		<span class="keyword">this</span>.setState(&#123;</div><div class="line">			name: <span class="string">'按钮2'</span></div><div class="line">		&#125;)</div><div class="line">	&#125;</div><div class="line"></div><div class="line">	render() &#123;</div><div class="line">		&lt;div&gt;</div><div class="line">			&lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.changeName&#125; ref=&#123;<span class="keyword">this</span>.buttonRef&#125;&gt;&#123;<span class="keyword">this</span>.state.name&#125;&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">		&lt;/</span>div&gt;</div><div class="line">	&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure>
+<p>首次加载button后会调用buttonRef方法，打印出来的e为该实例，在更新组件后，第二次调用buttonRef, 参数值为null</p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2017/09/23/React中使用ref作为回调方法/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2017/08/12/javascript基本数据类型的一些概念/">
                             javascript基本数据类型的一些概念
                         </a>
@@ -977,61 +1033,6 @@
         
     </article>
     
-    
-    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
-        <div class="postShorten-wrap">
-            
-            <div class="postShorten-header">
-                <h1 class="postShorten-title" itemprop="headline">
-                    
-                        <a class="link-unstyled" href="/2017/01/10/Centos7关闭防火墙并使用iptables/">
-                            Centos7关闭防火墙并使用iptables
-                        </a>
-                    
-                </h1>
-                <div class="postShorten-meta">
-    <time itemprop="datePublished" datetime="2017-01-10T22:24:13+08:00">
-	
-		    1月 10, 2017
-    	
-    </time>
-    
-        <span>发布在 </span>
-        
-    <a class="category-link" href="/categories/Linux/">Linux</a>, <a class="category-link" href="/categories/Linux/CentOS/">CentOS</a>
-
-
-    
-</div>
-
-            </div>
-            
-                <div class="postShorten-content" itemprop="articleBody">
-                    <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>关闭firewall<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
-<p>禁止firewall开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">disable</span> firewalld.service</div></pre></td></tr></table></figure></p>
-<h3 id="安装iptables"><a href="#安装iptables" class="headerlink" title="安装iptables"></a>安装iptables</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install iptables-services</div></pre></td></tr></table></figure>
-<h3 id="修改iptables配置"><a href="#修改iptables配置" class="headerlink" title="修改iptables配置"></a>修改iptables配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
-<p>看情况增加规则，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT</div></pre></td></tr></table></figure></p>
-<h3 id="重启iptables并配置iptables开机启动"><a href="#重启iptables并配置iptables开机启动" class="headerlink" title="重启iptables并配置iptables开机启动"></a>重启iptables并配置iptables开机启动</h3><p>重启iptables</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart iptables.service</div></pre></td></tr></table></figure>
-<p>设置iptables开机启动</p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> iptables.service</div></pre></td></tr></table></figure>
-                    
-                        
-                    
-                    
-                        <p>
-                            <a href="/2017/01/10/Centos7关闭防火墙并使用iptables/#post-footer" class="postShorten-excerpt_link link">
-                                评论和共享
-                            </a>
-                        </p>
-                    
-                </div>
-            
-        </div>
-        
-    </article>
-    
     <div class="pagination-bar">
     <ul class="pagination">
         
@@ -1313,7 +1314,7 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 11 篇文章
+                找到 12 篇文章
             </p>
         </div>
     </div>

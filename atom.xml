@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="http://www.zewail.me/"/>
-  <updated>2017-09-20T16:53:54.000Z</updated>
+  <updated>2017-09-23T10:56:14.000Z</updated>
   <id>http://www.zewail.me/</id>
   
   <author>
@@ -15,6 +15,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>React中使用ref作为回调方法</title>
+    <link href="http://www.zewail.me/2017/09/23/React%E4%B8%AD%E4%BD%BF%E7%94%A8ref%E4%BD%9C%E4%B8%BA%E5%9B%9E%E8%B0%83%E6%96%B9%E6%B3%95/"/>
+    <id>http://www.zewail.me/2017/09/23/React中使用ref作为回调方法/</id>
+    <published>2017-09-23T10:47:06.000Z</published>
+    <updated>2017-09-23T10:56:14.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>React提供的这个ref属性，表示为对组件真正实例的引用</p><p>ref属性可以设置为一个回调函数，这也是官方强烈推荐的用法</p><p>这个函数执行的时机:</p><ul><li><strong>组件被挂载后</strong>，回调函数被立即执行，回调函数的参数为该组件的具体实例</li><li><strong>组件被卸载或者原有的ref属性本身发生变化时</strong>，回调也会被立即执行，此时回调函数参数为<code>null</code></li></ul><figure class="highlight js"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div><div class="line">25</div></pre></td><td class="code"><pre><div class="line"><span class="class"><span class="keyword">class</span> <span class="title">MyComponent</span> <span class="keyword">extends</span> <span class="title">Component</span> </span>&#123;</div><div class="line"></div><div class="line"><span class="keyword">constructor</span>() &#123;</div><div class="line"><span class="keyword">super</span>()</div><div class="line"><span class="keyword">this</span>.state = &#123;</div><div class="line">name: <span class="string">'按钮1'</span></div><div class="line">&#125;</div><div class="line">&#125;</div><div class="line"></div><div class="line">buttonRef = <span class="function">(<span class="params">e</span>) =&gt;</span> &#123;</div><div class="line"><span class="built_in">console</span>.log(e)</div><div class="line">&#125;</div><div class="line"></div><div class="line">changeName = <span class="function"><span class="params">()</span> =&gt;</span> &#123;</div><div class="line"><span class="keyword">this</span>.setState(&#123;</div><div class="line">name: <span class="string">'按钮2'</span></div><div class="line">&#125;)</div><div class="line">&#125;</div><div class="line"></div><div class="line">render() &#123;</div><div class="line">&lt;div&gt;</div><div class="line">&lt;button type=<span class="string">"button"</span> onClick=&#123;<span class="keyword">this</span>.changeName&#125; ref=&#123;<span class="keyword">this</span>.buttonRef&#125;&gt;&#123;<span class="keyword">this</span>.state.name&#125;&lt;<span class="regexp">/button&gt;</span></div><div class="line"><span class="regexp">&lt;/</span>div&gt;</div><div class="line">&#125;</div><div class="line">&#125;</div></pre></td></tr></table></figure><p>首次加载button后会调用buttonRef方法，打印出来的e为该实例，在更新组件后，第二次调用buttonRef, 参数值为null</p>]]></content>
+    
+    <summary type="html">
+    
+      
+      
+        &lt;p&gt;React提供的这个ref属性，表示为对组件真正实例的引用&lt;/p&gt;
+&lt;p&gt;ref属性可以设置为一个回调函数，这也是官方强烈推荐的用法&lt;/p&gt;
+&lt;p&gt;这个函数执行的时机:&lt;/p&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;strong&gt;组件被挂载后&lt;/strong&gt;，回调函数被立即执行，回调函数的
+      
+    
+    </summary>
+    
+      <category term="Javascript" scheme="http://www.zewail.me/categories/Javascript/"/>
+    
+      <category term="React" scheme="http://www.zewail.me/categories/Javascript/React/"/>
+    
+    
+      <category term="javascript" scheme="http://www.zewail.me/tags/javascript/"/>
+    
+      <category term="react" scheme="http://www.zewail.me/tags/react/"/>
+    
+  </entry>
   
   <entry>
     <title>javascript基本数据类型的一些概念</title>
@@ -276,9 +309,9 @@
       <category term="CentOS" scheme="http://www.zewail.me/categories/Linux/CentOS/"/>
     
     
-      <category term="linux" scheme="http://www.zewail.me/tags/linux/"/>
-    
       <category term="centos" scheme="http://www.zewail.me/tags/centos/"/>
+    
+      <category term="linux" scheme="http://www.zewail.me/tags/linux/"/>
     
   </entry>
   

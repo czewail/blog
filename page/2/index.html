@@ -245,6 +245,61 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2017/01/10/Centos7关闭防火墙并使用iptables/">
+                            Centos7关闭防火墙并使用iptables
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-01-10T22:24:13+08:00">
+	
+		    1月 10, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/Linux/">Linux</a>, <a class="category-link" href="/categories/Linux/CentOS/">CentOS</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h3 id="关闭防火墙"><a href="#关闭防火墙" class="headerlink" title="关闭防火墙"></a>关闭防火墙</h3><p>关闭firewall<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl stop firewalld.service</div></pre></td></tr></table></figure></p>
+<p>禁止firewall开机启动<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">disable</span> firewalld.service</div></pre></td></tr></table></figure></p>
+<h3 id="安装iptables"><a href="#安装iptables" class="headerlink" title="安装iptables"></a>安装iptables</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">yum -y install iptables-services</div></pre></td></tr></table></figure>
+<h3 id="修改iptables配置"><a href="#修改iptables配置" class="headerlink" title="修改iptables配置"></a>修改iptables配置</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/sysconfig/iptables</div></pre></td></tr></table></figure>
+<p>看情况增加规则，例如：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">-A INPUT -m state --state NEW -m tcp -p tcp --dport 8080 -j ACCEPT</div></pre></td></tr></table></figure></p>
+<h3 id="重启iptables并配置iptables开机启动"><a href="#重启iptables并配置iptables开机启动" class="headerlink" title="重启iptables并配置iptables开机启动"></a>重启iptables并配置iptables开机启动</h3><p>重启iptables</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl restart iptables.service</div></pre></td></tr></table></figure>
+<p>设置iptables开机启动</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">systemctl <span class="built_in">enable</span> iptables.service</div></pre></td></tr></table></figure>
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2017/01/10/Centos7关闭防火墙并使用iptables/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2016/11/03/CSS-选择器详解/">
                             CSS 选择器详解
                         </a>
@@ -585,7 +640,7 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 11 篇文章
+                找到 12 篇文章
             </p>
         </div>
     </div>
