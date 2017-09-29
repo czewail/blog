@@ -6,25 +6,25 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="generator" content="Zewail的博客">
-    <title>CentOS上搭建Shadowsocks服务端 - Zewail的博客</title>
+    <title>对BFC元素的一些理解 - Zewail的博客</title>
     <meta name="author" content="Zewail">
     
     
     
         <link rel="alternate" type="application/atom+xml" title="RSS" href="/atom.xml">
     
-    <meta name="description" content="安装使用python版Shadowsocks安装 地址 123yum install python-setuptoolseasy_install pippip install shadowsocks 配置新建/etc/shadowsocks.json文件1vi /etc/shadowsocks.json 输入以下内容12345678910&amp;#123;    &quot;server&quot;:&quot;服务器IP&quot;,">
-<meta name="keywords" content="centos,shadowsocks">
+    <meta name="description" content="概念块级格式化上下文，它是指一个独立的块级渲染区域，只有块级Box参与，该区域拥有一套渲染规则来约束块级盒子的布局，且与区域外部无关。 BFC的生成CSS2.1中规定满足下列CSS声明之一的元素便会生成BFC  float的值不为none overflow的值不为visible display的值为inline-block、table-cell、table-caption position的值为a">
+<meta name="keywords" content="css,html">
 <meta property="og:type" content="blog">
-<meta property="og:title" content="CentOS上搭建Shadowsocks服务端">
-<meta property="og:url" content="http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/index.html">
+<meta property="og:title" content="对BFC元素的一些理解">
+<meta property="og:url" content="http://www.zewail.me/2017/09/29/对BFC元素的一些理解/index.html">
 <meta property="og:site_name" content="Zewail的博客">
-<meta property="og:description" content="安装使用python版Shadowsocks安装 地址 123yum install python-setuptoolseasy_install pippip install shadowsocks 配置新建/etc/shadowsocks.json文件1vi /etc/shadowsocks.json 输入以下内容12345678910&amp;#123;    &quot;server&quot;:&quot;服务器IP&quot;,">
+<meta property="og:description" content="概念块级格式化上下文，它是指一个独立的块级渲染区域，只有块级Box参与，该区域拥有一套渲染规则来约束块级盒子的布局，且与区域外部无关。 BFC的生成CSS2.1中规定满足下列CSS声明之一的元素便会生成BFC  float的值不为none overflow的值不为visible display的值为inline-block、table-cell、table-caption position的值为a">
 <meta property="og:locale" content="zh-cn">
-<meta property="og:updated_time" content="2017-09-26T17:27:05.999Z">
+<meta property="og:updated_time" content="2017-09-29T12:46:21.709Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="CentOS上搭建Shadowsocks服务端">
-<meta name="twitter:description" content="安装使用python版Shadowsocks安装 地址 123yum install python-setuptoolseasy_install pippip install shadowsocks 配置新建/etc/shadowsocks.json文件1vi /etc/shadowsocks.json 输入以下内容12345678910&amp;#123;    &quot;server&quot;:&quot;服务器IP&quot;,">
+<meta name="twitter:title" content="对BFC元素的一些理解">
+<meta name="twitter:description" content="概念块级格式化上下文，它是指一个独立的块级渲染区域，只有块级Box参与，该区域拥有一套渲染规则来约束块级盒子的布局，且与区域外部无关。 BFC的生成CSS2.1中规定满足下列CSS声明之一的元素便会生成BFC  float的值不为none overflow的值不为visible display的值为inline-block、table-cell、table-caption position的值为a">
     
     
         
@@ -248,20 +248,20 @@
         <div class="post-header main-content-wrap text-left">
     
         <h1 class="post-title" itemprop="headline">
-            CentOS上搭建Shadowsocks服务端
+            对BFC元素的一些理解
         </h1>
     
     
         <div class="post-meta">
-    <time itemprop="datePublished" datetime="2017-01-11T19:44:33+08:00">
+    <time itemprop="datePublished" datetime="2017-09-29T19:56:04+08:00">
 	
-		    1月 11, 2017
+		    9月 29, 2017
     	
     </time>
     
         <span>发布在 </span>
         
-    <a class="category-link" href="/categories/Linux/">Linux</a>, <a class="category-link" href="/categories/Linux/CentOS/">CentOS</a>
+    <a class="category-link" href="/categories/CSS/">CSS</a>
 
 
     
@@ -272,13 +272,22 @@
     
     <div class="post-content markdown" itemprop="articleBody">
         <div class="main-content-wrap">
-            <h3 id="安装"><a href="#安装" class="headerlink" title="安装"></a>安装</h3><p>使用python版Shadowsocks安装 <a href="https://pypi.python.org/pypi/shadowsocks" target="_blank" rel="external">地址</a></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">yum install python-setuptools</div><div class="line">easy_install pip</div><div class="line">pip install shadowsocks</div></pre></td></tr></table></figure>
-<h3 id="配置"><a href="#配置" class="headerlink" title="配置"></a>配置</h3><p>新建<code>/etc/shadowsocks.json</code>文件<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">vi /etc/shadowsocks.json</div></pre></td></tr></table></figure></p>
-<p>输入以下内容<br><figure class="highlight json"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">&#123;</div><div class="line">    <span class="attr">"server"</span>:<span class="string">"服务器IP"</span>,</div><div class="line">    <span class="attr">"server_port"</span>:<span class="number">8388</span>,</div><div class="line">    <span class="attr">"local_address"</span>: <span class="string">"127.0.0.1"</span>,</div><div class="line">    <span class="attr">"local_port"</span>:<span class="number">1080</span>,</div><div class="line">    <span class="attr">"password"</span>:<span class="string">"密码"</span>,</div><div class="line">    <span class="attr">"timeout"</span>:<span class="number">300</span>,</div><div class="line">    <span class="attr">"method"</span>:<span class="string">"aes-256-cfb"</span>,</div><div class="line">    <span class="attr">"fast_open"</span>: <span class="literal">false</span></div><div class="line">&#125;</div></pre></td></tr></table></figure></p>
-<p>替换服务器IP和密码，也可以自定义端口</p>
-<h3 id="运行"><a href="#运行" class="headerlink" title="运行"></a>运行</h3><p>前台运行(Ctrl+C或者关闭终端服务会自动停止)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json</div></pre></td></tr></table></figure></p>
-<p>后台运行(推荐，关闭终端后服务会继续运行)<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">ssserver -c /etc/shadowsocks.json -d start</div><div class="line">ssserver -c /etc/shadowsocks.json -d stop</div></pre></td></tr></table></figure></p>
+            <h3 id="概念"><a href="#概念" class="headerlink" title="概念"></a>概念</h3><p>块级格式化上下文，它是指一个独立的块级渲染区域，只有块级Box参与，该区域拥有一套渲染规则来约束块级盒子的布局，且与区域外部无关。</p>
+<h3 id="BFC的生成"><a href="#BFC的生成" class="headerlink" title="BFC的生成"></a>BFC的生成</h3><p>CSS2.1中规定满足下列CSS声明之一的元素便会生成BFC</p>
+<ul>
+<li><code>float</code>的值不为<code>none</code></li>
+<li><code>overflow</code>的值不为<code>visible</code></li>
+<li><code>display</code>的值为<code>inline-block</code>、<code>table-cell</code>、<code>table-caption</code></li>
+<li><code>position</code>的值为<code>absolute</code>或<code>fixed</code></li>
+</ul>
+<h3 id="BFC的约束规则"><a href="#BFC的约束规则" class="headerlink" title="BFC的约束规则"></a>BFC的约束规则</h3><ul>
+<li>内部盒子会垂直一个接一个放置</li>
+<li>垂直方向上的距离有margin决定，属于同一个BFC的俩个相邻的BOX的margin会发生重叠，与方向无关</li>
+<li>每个元素的左外边距与包含块的左边界相接触（从左到右），即使浮动元素也是如此，BFC中的子元素不会超出它的包含块，而position为absolute的元素可以超出它的包含块边界</li>
+<li>BFC的区域不会与float的元素区域重叠</li>
+<li>计算BFC的高度时，浮动子元素也参与计算</li>
+<li>BFC就是页面上的一个隔离的独立容器，容器里面的子元素不会影响到外面的元素，反之亦然</li>
+</ul>
 
             
         </div>
@@ -288,7 +297,7 @@
             <div class="post-footer-tags">
                 <span class="text-color-light text-small">标签</span><br/>
                 
-    <a class="tag tag--primary tag--small t-link" href="/tags/centos/">centos</a> <a class="tag tag--primary tag--small t-link" href="/tags/shadowsocks/">shadowsocks</a>
+    <a class="tag tag--primary tag--small t-link" href="/tags/css/">css</a> <a class="tag tag--primary tag--small t-link" href="/tags/html/">html</a>
 
             </div>
         
@@ -298,7 +307,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/22/解决screen断开后连不上的问题/"  data-tooltip="解决screen断开后连不上的问题">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -306,7 +315,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/10/Centos7关闭防火墙并使用iptables/" data-tooltip="Centos7关闭防火墙并使用iptables">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/09/23/React中使用ref作为回调方法/" data-tooltip="React中使用ref作为回调方法">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -324,7 +333,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -332,7 +341,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -340,7 +349,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -348,7 +357,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-weibo"></i>
                 </a>
             </li>
@@ -356,7 +365,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/&amp;title=CentOS上搭建Shadowsocks服务端">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/&amp;title=对BFC元素的一些理解">
                     <i class="fa fa-qq"></i>
                 </a>
             </li>
@@ -364,7 +373,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-star"></i>
                 </a>
             </li>
@@ -404,7 +413,7 @@
         <ul class="post-actions post-action-nav">
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/22/解决screen断开后连不上的问题/"  data-tooltip="解决screen断开后连不上的问题">
+                    <a class="post-action-btn btn btn--disabled">
                 
                     <i class="fa fa-angle-left"></i>
                     <span class="hide-xs hide-sm text-small icon-ml">上一篇</span>
@@ -412,7 +421,7 @@
             </li>
             <li class="post-action">
                 
-                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/01/10/Centos7关闭防火墙并使用iptables/" data-tooltip="Centos7关闭防火墙并使用iptables">
+                    <a class="post-action-btn btn btn--default tooltip--top" href="/2017/09/23/React中使用ref作为回调方法/" data-tooltip="React中使用ref作为回调方法">
                 
                     <span class="hide-xs hide-sm text-small icon-mr">下一篇</span>
                     <i class="fa fa-angle-right"></i>
@@ -430,7 +439,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-facebook-official"></i>
                 </a>
             </li>
@@ -438,7 +447,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-twitter"></i>
                 </a>
             </li>
@@ -446,7 +455,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-google-plus"></i>
                 </a>
             </li>
@@ -454,7 +463,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-weibo"></i>
                 </a>
             </li>
@@ -462,7 +471,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/&amp;title=CentOS上搭建Shadowsocks服务端">
+                <a class="post-action-btn btn btn--default" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/&amp;title=对BFC元素的一些理解">
                     <i class="fa fa-qq"></i>
                 </a>
             </li>
@@ -470,7 +479,7 @@
             
             
             <li class="post-action hide-xs">
-                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="post-action-btn btn btn--default" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-star"></i>
                 </a>
             </li>
@@ -495,7 +504,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="share-option-btn" target="new" href="https://www.facebook.com/sharer/sharer.php?u=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-facebook-official"></i><span>分享到 Facebook</span>
                 </a>
             </li>
@@ -503,7 +512,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="share-option-btn" target="new" href="https://twitter.com/intent/tweet?text=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-twitter"></i><span>分享到 Twitter</span>
                 </a>
             </li>
@@ -511,7 +520,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="share-option-btn" target="new" href="https://plus.google.com/share?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-google-plus"></i><span>分享到 Google+</span>
                 </a>
             </li>
@@ -519,7 +528,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="share-option-btn" target="new" href="http://service.weibo.com/share/share.php?&amp;title=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-weibo"></i><span>分享到 Weibo</span>
                 </a>
             </li>
@@ -527,7 +536,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/&amp;title=CentOS上搭建Shadowsocks服务端">
+                <a class="share-option-btn" target="new" href="http://connect.qq.com/widget/shareqq/index.html?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/&amp;title=对BFC元素的一些理解">
                     <i class="fa fa-qq"></i><span>分享到 QQ</span>
                 </a>
             </li>
@@ -535,7 +544,7 @@
             
             
             <li class="share-option">
-                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/">
+                <a class="share-option-btn" target="new" href="http://sns.qzone.qq.com/cgi-bin/qzshare/cgi_qzshare_onekey?url=http://www.zewail.me/2017/09/29/对BFC元素的一些理解/">
                     <i class="fa fa-star"></i><span>分享到 Qzone</span>
                 </a>
             </li>
