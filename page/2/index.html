@@ -245,6 +245,62 @@
             <div class="postShorten-header">
                 <h1 class="postShorten-title" itemprop="headline">
                     
+                        <a class="link-unstyled" href="/2017/04/10/LNMP安装PHP-fileinfo扩展模块/">
+                            LNMP安装PHP fileinfo扩展模块
+                        </a>
+                    
+                </h1>
+                <div class="postShorten-meta">
+    <time itemprop="datePublished" datetime="2017-04-10T22:31:47+08:00">
+	
+		    4月 10, 2017
+    	
+    </time>
+    
+        <span>发布在 </span>
+        
+    <a class="category-link" href="/categories/PHP/">PHP</a>
+
+
+    
+</div>
+
+            </div>
+            
+                <div class="postShorten-content" itemprop="articleBody">
+                    <h4 id="第一步：找到lnmpa安装源位置"><a href="#第一步：找到lnmpa安装源位置" class="headerlink" title="第一步：找到lnmpa安装源位置"></a>第一步：找到lnmpa安装源位置</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line"><span class="comment"># 找到自己安装的php版本</span></div><div class="line"><span class="built_in">cd</span> /lnmp1.3-full/src/php-5.6.9/ext/fileinfo/</div></pre></td></tr></table></figure>
+<h4 id="第二步：查看phpize"><a href="#第二步：查看phpize" class="headerlink" title="第二步：查看phpize"></a>第二步：查看phpize</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/usr/<span class="built_in">local</span>/php/bin/phpize</div></pre></td></tr></table></figure>
+<p>返回类似下面的信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Configuring <span class="keyword">for</span>:</div><div class="line">PHP Api Version:         20131106</div><div class="line">Zend Module Api No:      20131226</div><div class="line">Zend Extension Api No:   220131226</div></pre></td></tr></table></figure></p>
+<p>phpize是用来扩展php扩展模块的，通过phpize可以建立php的外挂模块，比如你想在原来编译好的php中加入memcached或者ImageMagick等扩展模块，可以使用phpize</p>
+<h4 id="第三步：编译模块"><a href="#第三步：编译模块" class="headerlink" title="第三步：编译模块"></a>第三步：编译模块</h4><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">./configure --with-php-config=/usr/<span class="built_in">local</span>/php/bin/php-config</div><div class="line">make &amp;&amp; make install</div></pre></td></tr></table></figure>
+<p>返回类似下面信息：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">Build complete.</div><div class="line">Don<span class="string">'t forget to run '</span>make <span class="built_in">test</span><span class="string">'.</span></div><div class="line"><span class="string">Installing shared extensions:     /usr/local/php/lib/php/extensions/nodebug-non-zts-20131226/</span></div></pre></td></tr></table></figure></p>
+<p>表明安装成功了。</p>
+<h4 id="第四步：修改php配置"><a href="#第四步：修改php配置" class="headerlink" title="第四步：修改php配置"></a>第四步：修改php配置</h4><p>/usr/local/php/etc/php.ini 添加扩展：<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">extension=fileinfo.so</div></pre></td></tr></table></figure></p>
+<p>如果安装的是nginx，则重启php-fpm进程：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">/etc/init.d/php-fpm restart</div></pre></td></tr></table></figure></p>
+
+                    
+                        
+                    
+                    
+                        <p>
+                            <a href="/2017/04/10/LNMP安装PHP-fileinfo扩展模块/#post-footer" class="postShorten-excerpt_link link">
+                                评论和共享
+                            </a>
+                        </p>
+                    
+                </div>
+            
+        </div>
+        
+    </article>
+    
+    
+    <article class="postShorten postShorten--thumbnailimg-bottom" itemscope itemType="http://schema.org/BlogPosting">
+        <div class="postShorten-wrap">
+            
+            <div class="postShorten-header">
+                <h1 class="postShorten-title" itemprop="headline">
+                    
                         <a class="link-unstyled" href="/2017/01/22/解决screen断开后连不上的问题/">
                             解决screen断开后连不上的问题
                         </a>
@@ -745,7 +801,7 @@
                 data-message-zero="没有找到文章"
                 data-message-one="找到 1 篇文章"
                 data-message-other="找到 {n} 篇文章">
-                找到 14 篇文章
+                找到 15 篇文章
             </p>
         </div>
     </div>
