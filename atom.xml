@@ -5,9 +5,9 @@
   <subtitle>我好像在哪见过你</subtitle>
   <link href="/atom.xml" rel="self"/>
   
-  <link href="http://www.zewail.me/"/>
+  <link href="https://czewail.github.io/blog/"/>
   <updated>2018-01-31T06:15:55.165Z</updated>
-  <id>http://www.zewail.me/</id>
+  <id>https://czewail.github.io/blog/</id>
   
   <author>
     <name>Zewail</name>
@@ -18,8 +18,8 @@
   
   <entry>
     <title>从零开始搭建React全家桶环境</title>
-    <link href="http://www.zewail.me/2018/01/31/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAReact%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%8E%AF%E5%A2%83/"/>
-    <id>http://www.zewail.me/2018/01/31/从零开始搭建React全家桶环境/</id>
+    <link href="https://czewail.github.io/blog/2018/01/31/%E4%BB%8E%E9%9B%B6%E5%BC%80%E5%A7%8B%E6%90%AD%E5%BB%BAReact%E5%85%A8%E5%AE%B6%E6%A1%B6%E7%8E%AF%E5%A2%83/"/>
+    <id>https://czewail.github.io/blog/2018/01/31/从零开始搭建React全家桶环境/</id>
     <published>2018-01-31T05:03:05.000Z</published>
     <updated>2018-01-31T06:15:55.165Z</updated>
     
@@ -34,17 +34,17 @@
     
     </summary>
     
-      <category term="React" scheme="http://www.zewail.me/categories/React/"/>
+      <category term="React" scheme="https://czewail.github.io/blog/categories/React/"/>
     
     
-      <category term="react" scheme="http://www.zewail.me/tags/react/"/>
+      <category term="react" scheme="https://czewail.github.io/blog/tags/react/"/>
     
   </entry>
   
   <entry>
     <title>Laravel Passport认证设置自定义获取授权用户</title>
-    <link href="http://www.zewail.me/2018/01/15/Laravel-Passport%E8%AE%A4%E8%AF%81%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E7%94%A8%E6%88%B7%E5%90%8D/"/>
-    <id>http://www.zewail.me/2018/01/15/Laravel-Passport认证设置自定义用户名/</id>
+    <link href="https://czewail.github.io/blog/2018/01/15/Laravel-Passport%E8%AE%A4%E8%AF%81%E8%AE%BE%E7%BD%AE%E8%87%AA%E5%AE%9A%E4%B9%89%E7%94%A8%E6%88%B7%E5%90%8D/"/>
+    <id>https://czewail.github.io/blog/2018/01/15/Laravel-Passport认证设置自定义用户名/</id>
     <published>2018-01-15T12:26:15.000Z</published>
     <updated>2018-01-15T16:41:52.700Z</updated>
     
@@ -60,19 +60,19 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://www.zewail.me/categories/PHP/"/>
+      <category term="PHP" scheme="https://czewail.github.io/blog/categories/PHP/"/>
     
-      <category term="Laravel" scheme="http://www.zewail.me/categories/PHP/Laravel/"/>
+      <category term="Laravel" scheme="https://czewail.github.io/blog/categories/PHP/Laravel/"/>
     
     
-      <category term="laravel" scheme="http://www.zewail.me/tags/laravel/"/>
+      <category term="laravel" scheme="https://czewail.github.io/blog/tags/laravel/"/>
     
   </entry>
   
   <entry>
     <title>对BFC元素的一些理解</title>
-    <link href="http://www.zewail.me/2017/09/29/%E5%AF%B9BFC%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3/"/>
-    <id>http://www.zewail.me/2017/09/29/对BFC元素的一些理解/</id>
+    <link href="https://czewail.github.io/blog/2017/09/29/%E5%AF%B9BFC%E5%85%83%E7%B4%A0%E7%9A%84%E4%B8%80%E4%BA%9B%E7%90%86%E8%A7%A3/"/>
+    <id>https://czewail.github.io/blog/2017/09/29/对BFC元素的一些理解/</id>
     <published>2017-09-29T11:56:04.000Z</published>
     <updated>2017-09-29T12:46:21.000Z</updated>
     
@@ -88,19 +88,19 @@
     
     </summary>
     
-      <category term="CSS" scheme="http://www.zewail.me/categories/CSS/"/>
+      <category term="CSS" scheme="https://czewail.github.io/blog/categories/CSS/"/>
     
     
-      <category term="css" scheme="http://www.zewail.me/tags/css/"/>
+      <category term="css" scheme="https://czewail.github.io/blog/tags/css/"/>
     
-      <category term="html" scheme="http://www.zewail.me/tags/html/"/>
+      <category term="html" scheme="https://czewail.github.io/blog/tags/html/"/>
     
   </entry>
   
   <entry>
     <title>React中使用ref作为回调方法</title>
-    <link href="http://www.zewail.me/2017/09/23/React%E4%B8%AD%E4%BD%BF%E7%94%A8ref%E4%BD%9C%E4%B8%BA%E5%9B%9E%E8%B0%83%E6%96%B9%E6%B3%95/"/>
-    <id>http://www.zewail.me/2017/09/23/React中使用ref作为回调方法/</id>
+    <link href="https://czewail.github.io/blog/2017/09/23/React%E4%B8%AD%E4%BD%BF%E7%94%A8ref%E4%BD%9C%E4%B8%BA%E5%9B%9E%E8%B0%83%E6%96%B9%E6%B3%95/"/>
+    <id>https://czewail.github.io/blog/2017/09/23/React中使用ref作为回调方法/</id>
     <published>2017-09-23T10:47:06.000Z</published>
     <updated>2017-09-23T10:56:14.000Z</updated>
     
@@ -119,21 +119,21 @@
     
     </summary>
     
-      <category term="Javascript" scheme="http://www.zewail.me/categories/Javascript/"/>
+      <category term="Javascript" scheme="https://czewail.github.io/blog/categories/Javascript/"/>
     
-      <category term="React" scheme="http://www.zewail.me/categories/Javascript/React/"/>
+      <category term="React" scheme="https://czewail.github.io/blog/categories/Javascript/React/"/>
     
     
-      <category term="react" scheme="http://www.zewail.me/tags/react/"/>
+      <category term="react" scheme="https://czewail.github.io/blog/tags/react/"/>
     
-      <category term="javascript" scheme="http://www.zewail.me/tags/javascript/"/>
+      <category term="javascript" scheme="https://czewail.github.io/blog/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>javascript基本数据类型的一些概念</title>
-    <link href="http://www.zewail.me/2017/08/12/javascript%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/"/>
-    <id>http://www.zewail.me/2017/08/12/javascript基本数据类型的一些概念/</id>
+    <link href="https://czewail.github.io/blog/2017/08/12/javascript%E5%9F%BA%E6%9C%AC%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/"/>
+    <id>https://czewail.github.io/blog/2017/08/12/javascript基本数据类型的一些概念/</id>
     <published>2017-08-11T16:07:30.000Z</published>
     <updated>2017-09-20T16:53:54.000Z</updated>
     
@@ -149,17 +149,17 @@
     
     </summary>
     
-      <category term="Javascript" scheme="http://www.zewail.me/categories/Javascript/"/>
+      <category term="Javascript" scheme="https://czewail.github.io/blog/categories/Javascript/"/>
     
     
-      <category term="javascript" scheme="http://www.zewail.me/tags/javascript/"/>
+      <category term="javascript" scheme="https://czewail.github.io/blog/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>Mac命令行用sublime、vscode、atom命令打开文件或目录</title>
-    <link href="http://www.zewail.me/2017/08/11/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%94%A8sublime%E3%80%81vscode%E3%80%81atom%E5%91%BD%E4%BB%A4%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/"/>
-    <id>http://www.zewail.me/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/</id>
+    <link href="https://czewail.github.io/blog/2017/08/11/Mac%E5%91%BD%E4%BB%A4%E8%A1%8C%E7%94%A8sublime%E3%80%81vscode%E3%80%81atom%E5%91%BD%E4%BB%A4%E6%89%93%E5%BC%80%E6%96%87%E4%BB%B6%E6%88%96%E7%9B%AE%E5%BD%95/"/>
+    <id>https://czewail.github.io/blog/2017/08/11/Mac命令行用sublime、vscode、atom命令打开文件或目录/</id>
     <published>2017-08-10T17:04:21.000Z</published>
     <updated>2017-09-20T15:18:10.000Z</updated>
     
@@ -174,19 +174,19 @@
     
     </summary>
     
-      <category term="Mac" scheme="http://www.zewail.me/categories/Mac/"/>
+      <category term="Mac" scheme="https://czewail.github.io/blog/categories/Mac/"/>
     
     
-      <category term="mac" scheme="http://www.zewail.me/tags/mac/"/>
+      <category term="mac" scheme="https://czewail.github.io/blog/tags/mac/"/>
     
-      <category term="sublime" scheme="http://www.zewail.me/tags/sublime/"/>
+      <category term="sublime" scheme="https://czewail.github.io/blog/tags/sublime/"/>
     
   </entry>
   
   <entry>
     <title>javascript闭包的好处及坏处</title>
-    <link href="http://www.zewail.me/2017/05/20/javascript%E9%97%AD%E5%8C%85%E7%9A%84%E5%A5%BD%E5%A4%84%E5%8F%8A%E5%9D%8F%E5%A4%84/"/>
-    <id>http://www.zewail.me/2017/05/20/javascript闭包的好处及坏处/</id>
+    <link href="https://czewail.github.io/blog/2017/05/20/javascript%E9%97%AD%E5%8C%85%E7%9A%84%E5%A5%BD%E5%A4%84%E5%8F%8A%E5%9D%8F%E5%A4%84/"/>
+    <id>https://czewail.github.io/blog/2017/05/20/javascript闭包的好处及坏处/</id>
     <published>2017-05-20T15:53:44.000Z</published>
     <updated>2017-09-20T16:54:24.000Z</updated>
     
@@ -203,17 +203,17 @@
     
     </summary>
     
-      <category term="Javascript" scheme="http://www.zewail.me/categories/Javascript/"/>
+      <category term="Javascript" scheme="https://czewail.github.io/blog/categories/Javascript/"/>
     
     
-      <category term="javascript" scheme="http://www.zewail.me/tags/javascript/"/>
+      <category term="javascript" scheme="https://czewail.github.io/blog/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>CSS3动画初识</title>
-    <link href="http://www.zewail.me/2017/05/20/CSS3%E5%8A%A8%E7%94%BB%E5%88%9D%E8%AF%86/"/>
-    <id>http://www.zewail.me/2017/05/20/CSS3动画初识/</id>
+    <link href="https://czewail.github.io/blog/2017/05/20/CSS3%E5%8A%A8%E7%94%BB%E5%88%9D%E8%AF%86/"/>
+    <id>https://czewail.github.io/blog/2017/05/20/CSS3动画初识/</id>
     <published>2017-05-20T15:10:45.000Z</published>
     <updated>2017-09-20T15:55:44.000Z</updated>
     
@@ -232,17 +232,17 @@
     
     </summary>
     
-      <category term="CSS" scheme="http://www.zewail.me/categories/CSS/"/>
+      <category term="CSS" scheme="https://czewail.github.io/blog/categories/CSS/"/>
     
     
-      <category term="css" scheme="http://www.zewail.me/tags/css/"/>
+      <category term="css" scheme="https://czewail.github.io/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>javascript原型与原型链的一些概念</title>
-    <link href="http://www.zewail.me/2017/05/11/javascript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/"/>
-    <id>http://www.zewail.me/2017/05/11/javascript原型与原型链的一些概念/</id>
+    <link href="https://czewail.github.io/blog/2017/05/11/javascript%E5%8E%9F%E5%9E%8B%E4%B8%8E%E5%8E%9F%E5%9E%8B%E9%93%BE%E7%9A%84%E4%B8%80%E4%BA%9B%E6%A6%82%E5%BF%B5/"/>
+    <id>https://czewail.github.io/blog/2017/05/11/javascript原型与原型链的一些概念/</id>
     <published>2017-05-11T12:44:36.000Z</published>
     <updated>2017-09-20T16:54:09.000Z</updated>
     
@@ -258,17 +258,17 @@
     
     </summary>
     
-      <category term="Javascript" scheme="http://www.zewail.me/categories/Javascript/"/>
+      <category term="Javascript" scheme="https://czewail.github.io/blog/categories/Javascript/"/>
     
     
-      <category term="javascript" scheme="http://www.zewail.me/tags/javascript/"/>
+      <category term="javascript" scheme="https://czewail.github.io/blog/tags/javascript/"/>
     
   </entry>
   
   <entry>
     <title>CSS 优先级机制</title>
-    <link href="http://www.zewail.me/2017/04/13/CSS-%E4%BC%98%E5%85%88%E7%BA%A7%E6%9C%BA%E5%88%B6/"/>
-    <id>http://www.zewail.me/2017/04/13/CSS-优先级机制/</id>
+    <link href="https://czewail.github.io/blog/2017/04/13/CSS-%E4%BC%98%E5%85%88%E7%BA%A7%E6%9C%BA%E5%88%B6/"/>
+    <id>https://czewail.github.io/blog/2017/04/13/CSS-优先级机制/</id>
     <published>2017-04-13T14:47:43.000Z</published>
     <updated>2017-09-20T15:18:58.000Z</updated>
     
@@ -283,17 +283,17 @@
     
     </summary>
     
-      <category term="CSS" scheme="http://www.zewail.me/categories/CSS/"/>
+      <category term="CSS" scheme="https://czewail.github.io/blog/categories/CSS/"/>
     
     
-      <category term="css" scheme="http://www.zewail.me/tags/css/"/>
+      <category term="css" scheme="https://czewail.github.io/blog/tags/css/"/>
     
   </entry>
   
   <entry>
     <title>LNMP安装PHP fileinfo扩展模块</title>
-    <link href="http://www.zewail.me/2017/04/10/LNMP%E5%AE%89%E8%A3%85PHP-fileinfo%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97/"/>
-    <id>http://www.zewail.me/2017/04/10/LNMP安装PHP-fileinfo扩展模块/</id>
+    <link href="https://czewail.github.io/blog/2017/04/10/LNMP%E5%AE%89%E8%A3%85PHP-fileinfo%E6%89%A9%E5%B1%95%E6%A8%A1%E5%9D%97/"/>
+    <id>https://czewail.github.io/blog/2017/04/10/LNMP安装PHP-fileinfo扩展模块/</id>
     <published>2017-04-10T14:31:47.000Z</published>
     <updated>2017-09-20T15:18:18.000Z</updated>
     
@@ -308,17 +308,17 @@
     
     </summary>
     
-      <category term="PHP" scheme="http://www.zewail.me/categories/PHP/"/>
+      <category term="PHP" scheme="https://czewail.github.io/blog/categories/PHP/"/>
     
     
-      <category term="php" scheme="http://www.zewail.me/tags/php/"/>
+      <category term="php" scheme="https://czewail.github.io/blog/tags/php/"/>
     
   </entry>
   
   <entry>
     <title>解决screen断开后连不上的问题</title>
-    <link href="http://www.zewail.me/2017/01/22/%E8%A7%A3%E5%86%B3screen%E6%96%AD%E5%BC%80%E5%90%8E%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%9A%84%E9%97%AE%E9%A2%98/"/>
-    <id>http://www.zewail.me/2017/01/22/解决screen断开后连不上的问题/</id>
+    <link href="https://czewail.github.io/blog/2017/01/22/%E8%A7%A3%E5%86%B3screen%E6%96%AD%E5%BC%80%E5%90%8E%E8%BF%9E%E4%B8%8D%E4%B8%8A%E7%9A%84%E9%97%AE%E9%A2%98/"/>
+    <id>https://czewail.github.io/blog/2017/01/22/解决screen断开后连不上的问题/</id>
     <published>2017-01-22T14:38:48.000Z</published>
     <updated>2017-09-20T15:19:53.000Z</updated>
     
@@ -335,17 +335,17 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zewail.me/categories/Linux/"/>
+      <category term="Linux" scheme="https://czewail.github.io/blog/categories/Linux/"/>
     
     
-      <category term="linux" scheme="http://www.zewail.me/tags/linux/"/>
+      <category term="linux" scheme="https://czewail.github.io/blog/tags/linux/"/>
     
   </entry>
   
   <entry>
     <title>CentOS上搭建Shadowsocks服务端</title>
-    <link href="http://www.zewail.me/2017/01/11/CentOS7%E4%B8%8A%E6%90%AD%E5%BB%BAShadowsocks%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
-    <id>http://www.zewail.me/2017/01/11/CentOS7上搭建Shadowsocks服务端/</id>
+    <link href="https://czewail.github.io/blog/2017/01/11/CentOS7%E4%B8%8A%E6%90%AD%E5%BB%BAShadowsocks%E6%9C%8D%E5%8A%A1%E7%AB%AF/"/>
+    <id>https://czewail.github.io/blog/2017/01/11/CentOS7上搭建Shadowsocks服务端/</id>
     <published>2017-01-11T11:44:33.000Z</published>
     <updated>2017-09-26T17:27:05.000Z</updated>
     
@@ -360,21 +360,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zewail.me/categories/Linux/"/>
+      <category term="Linux" scheme="https://czewail.github.io/blog/categories/Linux/"/>
     
-      <category term="CentOS" scheme="http://www.zewail.me/categories/Linux/CentOS/"/>
+      <category term="CentOS" scheme="https://czewail.github.io/blog/categories/Linux/CentOS/"/>
     
     
-      <category term="centos" scheme="http://www.zewail.me/tags/centos/"/>
+      <category term="centos" scheme="https://czewail.github.io/blog/tags/centos/"/>
     
-      <category term="shadowsocks" scheme="http://www.zewail.me/tags/shadowsocks/"/>
+      <category term="shadowsocks" scheme="https://czewail.github.io/blog/tags/shadowsocks/"/>
     
   </entry>
   
   <entry>
     <title>Centos7关闭防火墙并使用iptables</title>
-    <link href="http://www.zewail.me/2017/01/10/Centos7%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E5%B9%B6%E4%BD%BF%E7%94%A8iptables/"/>
-    <id>http://www.zewail.me/2017/01/10/Centos7关闭防火墙并使用iptables/</id>
+    <link href="https://czewail.github.io/blog/2017/01/10/Centos7%E5%85%B3%E9%97%AD%E9%98%B2%E7%81%AB%E5%A2%99%E5%B9%B6%E4%BD%BF%E7%94%A8iptables/"/>
+    <id>https://czewail.github.io/blog/2017/01/10/Centos7关闭防火墙并使用iptables/</id>
     <published>2017-01-10T14:24:13.000Z</published>
     <updated>2017-09-20T15:18:22.000Z</updated>
     
@@ -389,21 +389,21 @@
     
     </summary>
     
-      <category term="Linux" scheme="http://www.zewail.me/categories/Linux/"/>
+      <category term="Linux" scheme="https://czewail.github.io/blog/categories/Linux/"/>
     
-      <category term="CentOS" scheme="http://www.zewail.me/categories/Linux/CentOS/"/>
+      <category term="CentOS" scheme="https://czewail.github.io/blog/categories/Linux/CentOS/"/>
     
     
-      <category term="linux" scheme="http://www.zewail.me/tags/linux/"/>
+      <category term="linux" scheme="https://czewail.github.io/blog/tags/linux/"/>
     
-      <category term="centos" scheme="http://www.zewail.me/tags/centos/"/>
+      <category term="centos" scheme="https://czewail.github.io/blog/tags/centos/"/>
     
   </entry>
   
   <entry>
     <title>CSS 选择器详解</title>
-    <link href="http://www.zewail.me/2016/11/03/CSS-%E9%80%89%E6%8B%A9%E5%99%A8%E8%AF%A6%E8%A7%A3/"/>
-    <id>http://www.zewail.me/2016/11/03/CSS-选择器详解/</id>
+    <link href="https://czewail.github.io/blog/2016/11/03/CSS-%E9%80%89%E6%8B%A9%E5%99%A8%E8%AF%A6%E8%A7%A3/"/>
+    <id>https://czewail.github.io/blog/2016/11/03/CSS-选择器详解/</id>
     <published>2016-11-02T16:23:29.000Z</published>
     <updated>2017-09-20T16:32:25.000Z</updated>
     
@@ -419,10 +419,10 @@
     
     </summary>
     
-      <category term="CSS" scheme="http://www.zewail.me/categories/CSS/"/>
+      <category term="CSS" scheme="https://czewail.github.io/blog/categories/CSS/"/>
     
     
-      <category term="css" scheme="http://www.zewail.me/tags/css/"/>
+      <category term="css" scheme="https://czewail.github.io/blog/tags/css/"/>
     
   </entry>
   
